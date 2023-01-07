@@ -45,6 +45,12 @@ nav > ul > li a :hover {
   color: red;
 }
 
+/* hero */
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 700ms step-start infinite;
+}
+
 /* projects */
 .project-card {
   border: 1px solid black;
@@ -69,10 +75,18 @@ nav > ul > li a :hover {
   border-bottom: 1px solid black;
   font-weight: 500;
   padding-bottom: .5em;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,81,193,1) 0%, rgba(112,255,0,1) 100%);
+  background-clip: text;
+  -webkit-background-clip:text;
+  animation: rainbow 2s ease-in-out infinite;
 }
 .project-technologies:hover{
-
+  color:rgba(0,0,0,0);
 }
+.project-card ul li{
+  padding: .25em 0em;
+}
+
 
 /* contact */
 .contact-section {
@@ -170,14 +184,16 @@ footer {
 }
 
 /* animation */
-.blinking-cursor::after {
-  content: "|";
-  animation: blink 700ms step-start infinite;
-}
+
 @keyframes blink {
   50% {
     opacity: 0;
   }
+}
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
 }
 
 /*

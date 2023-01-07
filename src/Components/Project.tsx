@@ -20,7 +20,7 @@ const Project = ({ name, description, image, links }: IProject) => {
     <article className="project-card">
       <h4>{name}</h4>
       <div>{image}</div>
-      <p onClick={handleClick}>{(description.longDescription = "duzi bla")}</p>
+      <p onClick={handleClick}>{(description.longDescription = "duzi bla bla tekst ")}</p>
       {/* da se procita samo malo o projektu, pa kada se klikne na njega da
             izmeni izgled, bude popup alert sa vise opisa tj teksta 
         */}
