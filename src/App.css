@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --border-radius: 0.5em;
+}
+
+body {
+  font-size: 16px;
+  color-scheme: light dark;
+  font-family: "Roboto", sans-serif;
+  background: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  background: #d2deeb;
+  min-height: 100vh;
+}
+
+/* navigation */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+  padding: 1em;
+}
+
+/* animation */
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 700ms step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* contact */
+.contact-section{
+  display: flex;
+  justify-content: space-around;
+}
+.input {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 2px solid green;
+  background-color: transparent;
+  outline: none;
+  color: black;
+}
+.input-holder {
+  position: relative;
+}
+.input-holder label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.input-holder textarea:focus + label,
+.input-holder textarea:valid + label,
+.input-holder input:focus + label,
+.input-holder input:valid + label {
+  top: -1em;
+}
+.input-holder textarea + label{
+  padding-top: .25em;
+  padding-left: .5em;
+}
+.input-holder textarea:focus + label,
+.input-holder textarea:valid + label{
+  top:-1.2em
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+}
+.textarea {
+  padding: 0.5em;
+  width: 100%;
+  resize: none;
+  background: transparent;
+  outline: none;
+  border: 2px solid green;
+  color: black;
+  border-radius: var(--border-radius);
+}
+.btn-send {
+  font-size: 1rem;
+  padding: 0.8em;
+  border-radius: var(--border-radius);
+  background: green;
+  color: white;
+  width: fit-content;
+  outline: none;
+  border: none;
+}
+/* accordion */
+.accordion {
+  padding: 1em;
+  margin: 0.5em auto;
+  border-radius: var(--border-radius);
+  background: transparent;
+  max-width: 60%;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.accordion-title {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion-content {
+  margin-top: 1em;
+  padding: 1em 0;
+  border-top: 1px solid black;
+}
+
+/* footer */
+footer {
+  border-top: 1px solid black;
+  padding: 0.5em 0em;
+  text-align: center;
+}
+/*
+animacija za about sekciju da bude velika sklopljena slika puzle kada je u focusu, ili na ekranu inace se rasire elementi po ekranu
+
+about sekcija da bude grid koji bi se nalazio iz 4 slicice(dela slagalice)
+*/
+/*tudj kod koji treba da se preimenuje za kontakt forum
+*/
