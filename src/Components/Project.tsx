@@ -24,14 +24,15 @@ const Project = ({ name, description, image, links }: IProject) => {
       {/* da se procita samo malo o projektu, pa kada se klikne na njega da
             izmeni izgled, bude popup alert sa vise opisa tj teksta 
         */}
-      <p>tehnologije koriscene</p>
-      <ul>
+      <p className="project-technologies">Technologies used: </p>
+      <ul className="project-list">
         <li>Next.js</li>
         <li>Tailwind.css</li>
-        <li>Tailwind.css</li>
       </ul>
-      <a href="#">{links} github</a>
-      <a href="#">{links} demo</a>
+      <div>
+        <a href={links}>github</a>
+        <a href={links}> demo</a>
+      </div>
     </article>
   );
 };
