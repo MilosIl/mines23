@@ -17,7 +17,7 @@ const Project = ({ name, description, image, links }: IProject) => {
     setIsOpened(!isOpened);
   };
   return (
-    <div>
+    <article className="project-card">
       <h4>{name}</h4>
       <div>{image}</div>
       <p onClick={handleClick}>{(description.longDescription = "duzi bla")}</p>
@@ -25,9 +25,14 @@ const Project = ({ name, description, image, links }: IProject) => {
             izmeni izgled, bude popup alert sa vise opisa tj teksta 
         */}
       <p>tehnologije koriscene</p>
-      <p>{links} github</p>
-      <p>{links} demo</p>
-    </div>
+      <ul>
+        <li>Next.js</li>
+        <li>Tailwind.css</li>
+        <li>Tailwind.css</li>
+      </ul>
+      <a href="#">{links} github</a>
+      <a href="#">{links} demo</a>
+    </article>
   );
 };
 

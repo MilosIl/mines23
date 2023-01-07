@@ -1,19 +1,51 @@
 import React, { useState } from "react";
-//treba mi svg za meni, pitanja, 
+//treba mi svg za meni, pitanja,
 const Navbar = () => {
-const [isClicked,setIsClicked]=useState(false)
+  const [isClicked, setIsClicked] = useState(false);
 
-const handleClick=()=>{
-  setIsClicked(!isClicked)
-}
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
     <header>
       <nav onClick={handleClick}>
+        {isClicked ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        )}
+
         <ul>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li> <a href="">Home</a> </li>
+          <li> <a href="">Projects</a> </li>
+          <li> <a href="">About</a> </li>
+          <li> <a href="">Contact</a> </li>
         </ul>
       </nav>
     </header>

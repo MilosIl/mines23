@@ -30,24 +30,30 @@ body {
 nav ul {
   display: flex;
   justify-content: flex-end;
-}
-nav ul li {
   list-style: none;
+  list-style-type: none;
+}
+nav ul li a {
   padding: 1em;
+  cursor: pointer;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+nav > ul > li a :hover {
+  color: red;
 }
 
-/* animation */
-.blinking-cursor::after {
-  content: "|";
-  animation: blink 700ms step-start infinite;
+/* projects */
+.project-card {
+  border: 1px solid black;
+  border-radius: var(--border-radius);
+  background: #f3fef3;
 }
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
+
 /* contact */
-.contact-section{
+.contact-section {
   display: flex;
   justify-content: space-around;
 }
@@ -75,13 +81,13 @@ nav ul li {
 .input-holder input:valid + label {
   top: -1em;
 }
-.input-holder textarea + label{
-  padding-top: .25em;
-  padding-left: .5em;
+.input-holder textarea + label {
+  padding-top: 0.25em;
+  padding-left: 0.5em;
 }
 .input-holder textarea:focus + label,
-.input-holder textarea:valid + label{
-  top:-1.2em
+.input-holder textarea:valid + label {
+  top: -1.2em;
 }
 
 .form {
@@ -118,7 +124,7 @@ nav ul li {
   border-radius: var(--border-radius);
   background: transparent;
   max-width: 60%;
-  
+
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -140,6 +146,18 @@ footer {
   padding: 0.5em 0em;
   text-align: center;
 }
+
+/* animation */
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 700ms step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /*
 animacija za about sekciju da bude velika sklopljena slika puzle kada je u focusu, ili na ekranu inace se rasire elementi po ekranu
 
