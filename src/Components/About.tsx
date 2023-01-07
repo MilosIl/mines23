@@ -3,13 +3,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <section>
+    <section className="about-section">
       <h2>About me</h2>
-      <h1>ti lutas bebo, skrenuo si sa puta bebo</h1>
       <p>
         Self thought developer, with passion for new technologies. And ready to
         make a great product from your idea. 
-
       </p>
       <p>
         As developer, I love solving new puzzles and questions that can be
@@ -22,7 +20,7 @@ const About = () => {
       </p>
       <p>What is my passion on web technologies</p>
 
-      <p></p>
+      <p>Every developer dream is that hes product is used. That is going to make a change in (....)</p>
 
       <p>
         Everything good needs to be shared with others, but what is that in my
