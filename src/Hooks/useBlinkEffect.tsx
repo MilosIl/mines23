@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-enum Phase {
+export enum Phase {
   Typing,
   Pausing,
   Deleting,
@@ -13,6 +13,7 @@ const useBlinkEffect = (
 ): {
   title: string;
   selectedTitle: string;
+  phase:Phase
 } => {
   const [selectedTitle, setSelectedTitle] = useState(0);
   const [phase, setPhase] = useState(Phase.Typing);
@@ -44,6 +45,9 @@ const useBlinkEffect = (
           setPhase(Phase.Typing);
           return;
         }
+        if(selectedTitle === 3){
+          setPhase(Phase.Pausing)
+        }
         const nextRemaining = jobTitles[selectedTitle].slice(
           0,
           title.length - 1
@@ -60,11 +64,8 @@ const useBlinkEffect = (
           setPhase(Phase.Deleting);
         }, PAUSE_INTERVAL);
       }
-      default:
-        return;
     }
-    if (phase === Phase.Pausing) return;
   }, [jobTitles, title, phase, selectedTitle]);
-  return { title, selectedTitle: title[selectedTitle] };
+  return { title, selectedTitle: title[selectedTitle], phase };
 };
 export default useBlinkEffect;

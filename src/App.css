@@ -73,6 +73,7 @@ body {
 }
 
 /* hero */
+/* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */
 .blinking-cursor::after {
   content: "|";
   animation: blink 700ms step-start infinite;

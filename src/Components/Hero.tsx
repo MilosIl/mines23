@@ -11,7 +11,7 @@ const Hero = () => {
     <section>
       <p>Hi I'm Milos</p>
       <h1>
-        <span className="blinking-cursor" aria-label={selectedTitle}>
+        <span className="blinking-cursor " aria-label={selectedTitle}>
           {title}
         </span>
         developer
