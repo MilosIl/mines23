@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import github from '../assets/mdi_github.svg'
+
+
 type IProject = {
   name: string;
   description: {
@@ -30,7 +33,7 @@ const Project = ({ name, description, image, links }: IProject) => {
         <li>Tailwind.css</li>
       </ul>
       <div>
-        <a href={links}>github</a>
+        <a href={links}><img src={github} alt={github} /></a>
         <a href={links}> demo</a>
       </div>
     </article>

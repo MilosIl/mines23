@@ -60,7 +60,7 @@ const About = () => {
         look and function across different devices and screen sizes. Frontend
         developers also need to be up-to-date on the latest trends and best
         practices in web design and development. This includes staying informed
-        about new technologies and frameworks, such as React and Angular, which
+        about new technologies and frameworks such as React , which
         can help streamline the development process and create more efficient
         and effective interfaces. In addition to technical skills, frontend
         developers also need strong problem-solving and communication skills.
