@@ -195,7 +195,7 @@ body {
   margin: 0.5em auto;
   border-radius: var(--border-radius);
   background: transparent;
-  max-width: 60%;
+  width: 60%;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -271,12 +271,18 @@ footer {
   .menu-icon {
     display: block;
     position: absolute;
-    top: 1em;
+    top: 0.5em;
     right: 1em;
 
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 2;
+  }
+  .contact-section{
+    flex-direction: column;
+  }
+  .accordion{
+    width: 90%;
   }
 }
 @media (max-width: 375px) {

@@ -23,6 +23,7 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       
       <h2>Contact me</h2>
+      <div>
       <form
         className="form"
         onSubmit={handleSubmit}
@@ -79,6 +80,8 @@ const Contact = () => {
         <span onClick={handleCopy}>info@mines-dev.com</span>
         <p>linkedin,github</p>
       </div>
+      </div>
+
 
 
     </section>
