@@ -2,11 +2,22 @@ import Card from "./Card";
 
 const About = () => {
   return (
-    <section className="about-section" id='about'>
+    <section className="about-section" id="about">
       <h2>About me</h2>
+      <p>Im a self taught programmer with determination to learn more.</p>
+      <p>
+        Web development is one of my passions, that can give you satisfaction
+        and joy while working on a new project or just learning to becoming a
+        full stack developer
+      </p>
+      <p>
+        One of the reasons i like design is concept of beauty on a first look.
+        To make things that are efficient as user would come back and use it
+        again.
+      </p>
       <p>
         Self thought developer, with passion for new technologies. And ready to
-        make a great product from your idea. 
+        make a great product from your idea.
       </p>
       <p>
         As developer, I love solving new puzzles and questions that can be
@@ -19,7 +30,10 @@ const About = () => {
       </p>
       <p>What is my passion on web technologies</p>
 
-      <p>Every developer dream is that hes product is used. That is going to make a change in (....)</p>
+      <p>
+        Every developer dream is that hes product is used. That is going to make
+        a change in (....)
+      </p>
 
       <p>
         Everything good needs to be shared with others, but what is that in my
@@ -28,10 +42,18 @@ const About = () => {
       <p>to challenge myself and will to learn more</p>
       <p>Keeping up with challenges and improving my knowledge</p>
       <div className="card-container">
-
-      <Card title="Team player" body=" Looking for ways to improve myself and people around me."/>
-      <Card title="Devotion" body="  Deadlines are important, otherwise job wouldn't be finished."/>
-      <Card title="Remark" body=" Open for new projects and suggestions for improvement."/>
+        <Card
+          title="Team player"
+          body=" Looking for ways to improve myself and people around me."
+        />
+        <Card
+          title="Devotion"
+          body="  Deadlines are important, otherwise job wouldn't be finished."
+        />
+        <Card
+          title="Remark"
+          body=" Open for new projects and suggestions for improvement."
+        />
       </div>
     </section>
   );

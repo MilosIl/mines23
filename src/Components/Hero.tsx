@@ -1,12 +1,11 @@
+import { Link } from "react-scroll";
 import useBlinkEffect from "../Hooks/useBlinkEffect";
 
 const Hero = () => {
-  const jobTitles = ["Front-end", "Frontend", "Web", "React"];
-  const { title, selectedTitle} = useBlinkEffect(jobTitles);
+  const jobTitles = ["Frontend", "Front-end", "Web", "React"];
+  const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
-const handleProject=()=>{
-    console.log('projekti');
-}
+
 
   return (
     <section>
@@ -17,7 +16,16 @@ const handleProject=()=>{
         </span>
         developer
       </h1>
-      <button className="btn" onClick={handleProject}>Projects</button>
+      <Link
+        to="projects"
+        smooth={true}
+        spy={true}
+        offset={-122}
+        duration={1000}
+        className="btn"
+      >
+        Checkout my work
+      </Link>
     </section>
   );
 };

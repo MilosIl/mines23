@@ -6,6 +6,8 @@
 }
 :root {
   --border-radius: 0.5em;
+  --primary:blue;
+  --secondary:green;
 }
 
 body {
@@ -76,6 +78,7 @@ body {
   animation: blink 700ms step-start infinite;
 }
 .btn {
+  display: block;
   font-size: 1rem;
   padding: 0.8em;
   border-radius: var(--border-radius);
@@ -98,7 +101,7 @@ body {
   border-radius: var(--border-radius);
   background: #f3fef3;
   width: fit-content;
-  transition: all 300ms ease-in;
+  transition: all 400ms ease-in;
 }
 .project-card:hover {
   scale: 1.1;
@@ -121,6 +124,7 @@ body {
     rgba(40, 81, 193, 1) 0%,
     rgba(112, 255, 0, 1) 100%
   );
+  user-select: none;
   background-clip: text;
   -webkit-background-clip: text;
   animation: rainbow 2s ease-in-out infinite;

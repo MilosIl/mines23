@@ -3,7 +3,6 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Hero from "./Components/Hero";
 import Projects from "./Layout/Projects";
-import Questions from "./Layout/Questions";
 import Footer from "./Layout/Footer";
 import Navbar from "./Layout/Navbar";
 
@@ -15,7 +14,6 @@ function App() {
       <Projects />
       <About />
       <Contact />
-      <Questions />
       <Footer />
     </div>
   );

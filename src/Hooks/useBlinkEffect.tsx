@@ -28,6 +28,7 @@ const useBlinkEffect = (
           setPhase(Phase.Pausing);
           return;
         }
+        
         const timeout = setTimeout(() => {
           setTitle(nextTypedWord);
         }, TYPING_INTERVAL);
