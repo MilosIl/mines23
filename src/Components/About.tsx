@@ -1,6 +1,3 @@
-import React from "react";
-// treba 4paragrafa koja ce da imaju mogucnost da se prelamaju kao puzgla kockica
-
 const About = () => {
   return (
     <section className="about-section">

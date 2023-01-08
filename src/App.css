@@ -52,6 +52,9 @@ nav > ul > li a :hover {
 }
 
 /* projects */
+.project-section{
+  padding: 0em 1em;
+}
 .project-card {
   border: 1px solid black;
   padding: 1em;
@@ -87,7 +90,13 @@ nav > ul > li a :hover {
   padding: .25em 0em;
 }
 /* about section */
-
+.about-section{
+  padding: 1em;
+  font-size: 1rem;
+}
+.about-section>p{
+  line-height: 1.4;
+}
 
 /* contact */
 .contact-section {
@@ -175,6 +184,10 @@ nav > ul > li a :hover {
   margin-top: 1em;
   padding: 1em 0;
   border-top: 1px solid black;
+}
+.svg-icon{
+  width: 1.5em;
+  height: 1.5em;
 }
 
 /* footer */

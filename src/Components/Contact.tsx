@@ -6,7 +6,7 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
 
-  const handleCopy = (e: { target: { innerHTML: string } }) => {
+  const handleCopy = (e: { target: { innerHTML: string; }; }) => {
     navigator.clipboard.writeText(e.target.innerHTML);
   };
 
@@ -21,7 +21,8 @@ const Contact = () => {
   };
   return (
     <section className="contact-section">
-      <h3>Contact me</h3>
+      
+      <h2>Contact me</h2>
       <form
         className="form"
         onSubmit={handleSubmit}
@@ -78,6 +79,8 @@ const Contact = () => {
         <span onClick={handleCopy}>info@mines-dev.com</span>
         <p>linkedin,github</p>
       </div>
+
+
     </section>
   );
 };

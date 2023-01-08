@@ -3,8 +3,8 @@ import Project from "../Components/Project";
 
 const Projects = () => {
   return (
-    <section>
-      <h3>Projekti</h3>
+    <section className="project-section">
+      <h2>Projects</h2>
       <Project
         name={"Doggo"}
         description={{
