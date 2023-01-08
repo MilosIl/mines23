@@ -1,4 +1,3 @@
-import React from "react";
 import Project from "../Components/Project";
 
 const Projects = () => {

@@ -55,6 +55,7 @@ const About = () => {
           body=" Open for new projects and suggestions for improvement."
         />
       </div>
+      
     </section>
   );
 };

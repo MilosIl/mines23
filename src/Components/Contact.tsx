@@ -1,5 +1,9 @@
 import React, { FormEventHandler, useRef, useState } from "react";
 import emailjs from "@emailjs/browser"
+
+import linkedin from '../assets/mdi_linkedin.svg'
+import github from '../assets/mdi_github.svg'
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,7 +12,7 @@ const Contact = () => {
 
 
   const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
-    navigator.clipboard.writeText('info@mines-dev.com')
+    navigator.clipboard.writeText('milos.ilic@mines-dev.com')
     ;
   };
 
@@ -81,8 +85,9 @@ const Contact = () => {
 
       <div>
         <p>Feel free to reach out if you are interested in working with me</p>
-        <span onClick={handleCopy}>info@mines-dev.com</span>
-        <p>linkedin,github</p>
+        <span onClick={handleCopy}>milos.ilic@mines-dev.com</span>
+        <p><img src={linkedin} alt={linkedin}/></p>
+        <p><img src={github} alt={github}/></p>
       </div>
       </div>
 
