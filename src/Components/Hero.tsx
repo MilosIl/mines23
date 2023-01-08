@@ -17,7 +17,7 @@ const handleProject=()=>{
         </span>
         developer
       </h1>
-      <button onClick={handleProject}>Projects</button>
+      <button className="btn" onClick={handleProject}>Projects</button>
     </section>
   );
 };

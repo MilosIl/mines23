@@ -1,4 +1,5 @@
-import { FormEventHandler, useRef, useState } from "react";
+import React, { FormEventHandler, useRef, useState } from "react";
+import emailjs from "@emailjs/browser"
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -6,18 +7,21 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
 
-  const handleCopy = (e: { target: { innerHTML: string; }; }) => {
-    navigator.clipboard.writeText(e.target.innerHTML);
+  const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
+    navigator.clipboard.writeText('info@mines-dev.com')
+    ;
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
-    const form = formRef.current;
     event.preventDefault();
+    const form = formRef.current;
     if (!form) return;
     const poruka = Object.fromEntries(new FormData(form));
     console.log("poruka>>>", poruka);
+    setName('')
+    setEmail('')
+    setMessage('')
     
-    // treba da se ocisti polje sa unetim podacima da se ne salje vise  puta
   };
   return (
     <section className="contact-section" id="contact">
@@ -70,7 +74,7 @@ const Contact = () => {
           <label htmlFor="message">Message</label>
         </div>
 
-        <button className="btn-send" type="submit">
+        <button className="btn" type="submit">
           Send message
         </button>
       </form>
