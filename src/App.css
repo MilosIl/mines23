@@ -32,7 +32,7 @@ body {
   border-bottom: 1px solid var(--secondary);
 }
 .nav {
-  width: 100%;
+  width: 90%;
   min-height: 6vh;
   display: flex;
   justify-content: flex-end;
@@ -69,50 +69,7 @@ body {
 .menu-icon {
   display: none;
 }
-@media (max-width: 768px) {
-  .nav a {
-    margin: 1em;
-  }
-  .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
-  .nav a:hover {
-    font-weight: 500;
-  }
-  .nav-menu.show {
-    background-color: #3F4756;
-    margin-top: 0;
-    left: 0;
-    opacity: 1;
-    transition: all 0.6s ease;
-    z-index: 1;
-  }
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 1em;
-    right: 1em;
 
-    font-size: 1.8rem;
-    cursor: pointer;
-    z-index: 2;
-  }
-}
-@media (max-width: 375px) {
-}
 
 /* hero */
 .blinking-cursor::after {
@@ -278,11 +235,50 @@ footer {
   50%{background-position:right}
   100%{background-position:left}
 }
+/* media query */
+@media (max-width: 768px) {
+  .nav a {
+    margin: 1em;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav a:hover {
+    font-weight: 500;
+  }
+  .nav-menu.show {
+    background-color: #3F4756;
+    margin-top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
 
-/*
-animacija za about sekciju da bude velika sklopljena slika puzle kada je u focusu, ili na ekranu inace se rasire elementi po ekranu
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+@media (max-width: 375px) {
+}
 
-about sekcija da bude grid koji bi se nalazio iz 4 slicice(dela slagalice)
-*/
-/*tudj kod koji treba da se preimenuje za kontakt forum
-*/

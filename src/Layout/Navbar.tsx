@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 function Navbar() {
-  const [click, setClick] = useState(false);
+  const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setIsClick(!isClick);
+  const closeMobileMenu = () => setIsClick(false);
 
   const showButton = () => {
     if (window.innerWidth <= 769) {
-      setClick(false);
+      setIsClick(false);
     } else {
-      setClick(true);
+      setIsClick(true);
     }
   };
   const changeBackground = () => {
@@ -33,7 +33,7 @@ function Navbar() {
     <header>
       <nav className={nav ? "nav change show" : "nav show"}>
         <div className="menu-icon" onClick={handleClick}>
-          {click ? (
+          {isClick ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -65,7 +65,7 @@ function Navbar() {
             </svg>
           )}
         </div>
-        <ul className={click ? "nav-menu show" : "nav-menu"}>
+        <ul className={isClick ? "nav-menu show" : "nav-menu"}>
           <Link
             activeClass="active"
             to="home"
