@@ -3,7 +3,7 @@ import Project from "../Components/Project";
 
 const Projects = () => {
   return (
-    <section className="project-section">
+    <section className="project-section" id="projects">
       <h2>Projects</h2>
       <Project
         name={"Doggo"}

@@ -20,7 +20,7 @@ const Contact = () => {
     // treba da se ocisti polje sa unetim podacima da se ne salje vise  puta
   };
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       
       <h2>Contact me</h2>
       <form
