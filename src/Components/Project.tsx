@@ -1,14 +1,10 @@
 import { useState } from "react";
 
-import github from '../assets/mdi_github.svg'
-
+import github from "../assets/mdi_github.svg";
 
 type IProject = {
   name: string;
-  description: {
-    shortDescription: string;
-    longDescription: string;
-  };
+  description: string;
   image: string;
   links: string;
 };
@@ -23,7 +19,9 @@ const Project = ({ name, description, image, links }: IProject) => {
     <article className="project-card">
       <h4>{name}</h4>
       <div>{image}</div>
-      <p onClick={handleClick}>{(description.longDescription = "duzi bla bla tekst ")}</p>
+      <p onClick={handleClick}>
+        {(description = "duzi bla bla tekst ")}
+      </p>
       {/* da se procita samo malo o projektu, pa kada se klikne na njega da
             izmeni izgled, bude popup alert sa vise opisa tj teksta 
         */}
@@ -33,7 +31,9 @@ const Project = ({ name, description, image, links }: IProject) => {
         <li>Tailwind.css</li>
       </ul>
       <div>
-        <a href={links}><img src={github} alt={github} /></a>
+        <a href={links}>
+          <img src={github} alt={github} />
+        </a>
         <a href={links}> demo</a>
       </div>
     </article>

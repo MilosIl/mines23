@@ -7,28 +7,19 @@ const Projects = () => {
       <section className="project-section" id="projects">
         <Project
           name={"Doggo"}
-          description={{
-            shortDescription: "kratka varijanta teksta koja treba da se vidi",
-            longDescription: "duga prica koja moze da ima neki opis i korist",
-          }}
+          description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"google.com"}
         />
         <Project
           name={"Doggo"}
-          description={{
-            shortDescription: "kratka varijanta teksta koja treba da se vidi",
-            longDescription: "duga prica koja moze da ima neki opis i korist",
-          }}
+          description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"google.com"}
         />
         <Project
           name={"Doggo"}
-          description={{
-            shortDescription: "kratka varijanta teksta koja treba da se vidi",
-            longDescription: "duga prica koja moze da ima neki opis i korist",
-          }}
+          description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"google.com"}
         />
