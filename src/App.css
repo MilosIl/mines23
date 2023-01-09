@@ -95,6 +95,9 @@ body {
 /* projects */
 .project-section {
   padding: 0em 1em;
+  display: flex;
+  gap: 2em;
+  justify-content: space-evenly;
 }
 .project-card {
   border: 1px solid black;
@@ -382,6 +385,9 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0;
+  }
+  .project-section{
+    flex-wrap: wrap;
   }
 
   .contact-container {
