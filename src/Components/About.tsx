@@ -9,12 +9,12 @@ import next from "../assets/mdi_nextjs.svg";
 import tailwind from "../assets/mdi_tailwind.svg";
 import mui from "../assets/mdi_mui.svg";
 import bootstrap from "../assets/mdi_bootstrap.svg";
-import firebase from "../assets/mdi_firebase.svg";
 import mongodb from "../assets/mdi_mongodb.svg";
+import firebase from "../assets/mdi_firebase.svg";
 import git from "../assets/mdi_git.svg";
 import figma from "../assets/mdi_figma.svg";
 
-
+const iconsGroup=[html,css,javascript,typescript,react,next,tailwind,mui,bootstrap,mongodb,firebase,git,figma]
 
 const About = () => {
   return (
@@ -67,19 +67,11 @@ const About = () => {
         />
       </div>
       <div className="icons-container">
-        <img src={html} alt={html} />
-        <img src={css} alt={css} />
-        <img src={javascript} alt={javascript} />
-        <img src={typescript} alt={typescript} />
-        <img src={react} alt={react} />
-        <img src={next} alt={next} />
-        <img src={tailwind} alt={tailwind} />
-        <img src={mui} alt={mui} />
-        <img src={bootstrap} alt={bootstrap} />
-        <img src={mongodb} alt={mongodb} />
-        <img src={firebase} alt={firebase} />
-        <img src={git} alt={git} />
-        <img src={figma} alt={figma} />
+        {iconsGroup.map((icon:string)=>{
+          return(
+            <img src={icon} alt={icon}/>
+          )
+        })}
       </div>
     </section>
   );

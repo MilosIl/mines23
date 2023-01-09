@@ -6,8 +6,8 @@
 }
 :root {
   --border-radius: 0.5em;
-  --primary:blue;
-  --secondary:green;
+  --primary: blue;
+  --secondary: green;
 }
 
 body {
@@ -160,7 +160,7 @@ body {
   transition: transform 0.6s ease;
   width: fit-content;
 }
-.card:hover{
+.card:hover {
   border: 1px solid green;
 }
 
@@ -181,10 +181,24 @@ body {
   font-size: 1rem;
   text-align: center;
 }
-.icons-container{
+.icons-container {
+  margin-top: 1em;
   display: flex;
+  gap: 1em;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
+
+}
+.icons-container > img {
+  transition: all 500ms ease-in-out;
+}
+.icons-container > img:hover {
+  transform: scale(1.2);
+  
+}
+.icons-container:hover > img:not(:hover) {
+  transform: scale(0.9);
 }
 
 /* contact */
