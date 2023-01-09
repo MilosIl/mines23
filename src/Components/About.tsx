@@ -66,6 +66,8 @@ const About = () => {
           body="Open for new projects and suggestions for improvement."
         />
       </div>
+        {/* naslov treba da se promeni */}
+        <p>Title of technologies what i use</p>
       <div className="icons-container">
         {iconsGroup.map((icon:string,index:number)=>{
           return(

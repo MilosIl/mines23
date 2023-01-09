@@ -202,7 +202,7 @@ body {
 }
 
 /* contact */
-.contact-section {
+.contact-container {
   display: flex;
   justify-content: space-around;
 }
@@ -255,6 +255,30 @@ body {
   border: 2px solid green;
   color: black;
   border-radius: var(--border-radius);
+}
+.contact-email{
+  display: inline-block;
+  margin-top: .5em;
+  cursor: pointer;
+  position: relative;
+}
+.contact-email::before{
+  content: '';
+}
+
+.contact-email:hover::before{
+  content: 'Click to copy';
+  position: absolute;
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: .25em;
+  top: -30px;
+  right: 0;
+}
+.contact-icon{
+  display: flex;
+  margin-top: 1em;
+  gap: 2em;
 }
 
 /* accordion */
@@ -360,7 +384,7 @@ footer {
     padding: 0;
   }
 
-  .contact-section {
+  .contact-container {
     flex-direction: column;
   }
 

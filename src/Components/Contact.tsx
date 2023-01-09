@@ -20,15 +20,15 @@ const Contact = () => {
     if (!form) return;
     const poruka = Object.fromEntries(new FormData(form));
     console.log("poruka>>>", poruka);
-   
+
     setName("");
     setEmail("");
     setMessage("");
   };
   return (
-    <section className="contact-section" id="contact">
+    <section id="contact">
       <h2>Contact me</h2>
-      <div>
+      <div className="contact-container">
         <form
           className="form"
           onSubmit={handleSubmit}
@@ -82,13 +82,16 @@ const Contact = () => {
 
         <div>
           <p>Feel free to reach out if you are interested in working with me</p>
-          <span onClick={handleCopy}>milos.ilic@mines-dev.com</span>
-          <a>
-            <img className="svg-icon" src={linkedin} alt={linkedin} />
-          </a>
-          <a className="svg-icon">
-            <img className="svg-icon" src={github} alt={github} />
-          </a>
+          <span className="contact-email" onClick={handleCopy}>milos.ilic@mines-dev.com</span>
+
+          <div className="contact-icon">
+            <a href="#">
+              <img src={linkedin} alt={linkedin} />
+            </a>
+            <a href="#">
+              <img src={github} alt={github} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
