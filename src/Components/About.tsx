@@ -5,7 +5,7 @@ import css from "../assets/mdi_css.svg";
 import javascript from "../assets/mdi_javascript.svg";
 import typescript from "../assets/mdi_typescript.svg";
 import react from "../assets/mdi_react.svg";
-import next from "../assets/mdi_next.svg";
+import next from "../assets/mdi_nextjs.svg";
 import tailwind from "../assets/mdi_tailwind.svg";
 import mui from "../assets/mdi_mui.svg";
 import bootstrap from "../assets/mdi_bootstrap.svg";
@@ -14,7 +14,6 @@ import mongodb from "../assets/mdi_mongodb.svg";
 import git from "../assets/mdi_git.svg";
 import figma from "../assets/mdi_figma.svg";
 
-import javascript2 from "../assets/mdi_language-javascript2.svg";
 
 
 const About = () => {
@@ -68,7 +67,7 @@ const About = () => {
         />
       </div>
       <div className="icons-container">
-        <img className="svg-icon" src={html} alt={html} />
+        <img src={html} alt={html} />
         <img src={css} alt={css} />
         <img src={javascript} alt={javascript} />
         <img src={typescript} alt={typescript} />
