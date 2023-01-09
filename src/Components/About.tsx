@@ -67,9 +67,9 @@ const About = () => {
         />
       </div>
       <div className="icons-container">
-        {iconsGroup.map((icon:string)=>{
+        {iconsGroup.map((icon:string,index:number)=>{
           return(
-            <img src={icon} alt={icon}/>
+            <img key={index} src={icon} alt={icon}/>
           )
         })}
       </div>
