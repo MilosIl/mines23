@@ -180,7 +180,11 @@ body {
 .card-body {
   font-size: 1rem;
   text-align: center;
-  
+}
+.icons-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 /* contact */
