@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   --border-radius: 0.5em;
   --primary: blue;
@@ -52,7 +53,6 @@ body {
   text-align: center;
   justify-content: flex-end;
 }
-
 .nav a {
   text-decoration: none;
   text-transform: uppercase;
@@ -73,6 +73,7 @@ body {
 }
 
 /* hero */
+
 /* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */
 .blinking-cursor::after {
   content: "|";

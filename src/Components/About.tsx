@@ -20,25 +20,31 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <h2>About me</h2>
+
       <p>Im a self taught programmer with determination to learn more.</p>
+      
       <p>
         Web development is one of my passions, that can give you satisfaction
         and joy while working on a new project or just learning to becoming a
         full stack developer
       </p>
+
       <p>
         One of the reasons i like design is concept of beauty on a first look.
         To make things that are efficient as user would come back and use it
         again.
       </p>
+
       <p>
         Self thought developer, with passion for new technologies. And ready to
         make a great product from your idea.
       </p>
+
       <p>
         As developer, I love solving new puzzles and questions that can be
         thought as puzzle finished
       </p>
+
       <p>
         Problem solver, I have personal way of handling a problem.. First part
         is to make it into small portions and to have a clear understanding of
