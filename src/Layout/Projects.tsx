@@ -9,7 +9,13 @@ const Projects = () => {
           name={"Doggo"}
           description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
-          links={"google.com"}
+          links={"#"}
+        />
+        <Project
+          name={"Doggo"}
+          description={"kratka varijanta teksta koja treba da se vidi"}
+          image={"nema slike"}
+          links={"#"}
         />
         <Project
           name={"Doggo"}
@@ -17,13 +23,7 @@ const Projects = () => {
           image={"nema slike"}
           links={"google.com"}
         />
-        <Project
-          name={"Doggo"}
-          description={"kratka varijanta teksta koja treba da se vidi"}
-          image={"nema slike"}
-          links={"google.com"}
-        />
-      </section>{" "}
+      </section>
     </>
   );
 };
