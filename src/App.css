@@ -136,8 +136,14 @@ body {
 .project-technologies:hover {
   color: rgba(0, 0, 0, 0);
 }
+
+.projects-name{
+  font-size: 1rem;
+}
 .project-card ul li {
   padding: 0.25em 0em;
+  text-decoration: none;
+  font-weight: 500;
 }
 .project-links{
   display: flex;

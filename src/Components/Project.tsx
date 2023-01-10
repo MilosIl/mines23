@@ -9,16 +9,16 @@ type IProject = {
 
 const Project = ({ name, description, image, links }: IProject) => {
 
-
   return (
     <article className="project-card">
-      <h3>{name}</h3>
+      <h3 className='project-name'>{name}</h3>
       <div><img src={image} alt={image}/></div>
       <p>
         {description }
       </p>
       <p className="project-technologies">Technologies used: </p>
       <ul className="project-list">
+        {/* da se na hover vidi ikonica */}
         <li>Next.js</li>
         <li>Tailwind.css</li>
       </ul>
