@@ -5,8 +5,6 @@ const Hero = () => {
   const jobTitles = ["Frontend", "Front-end", "Web", "React"];
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
-
-
   return (
     <section className="hero-section">
       <div className="hero-left-side">
