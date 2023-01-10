@@ -88,7 +88,7 @@ const Contact = () => {
             <a href="#">
               <img src={linkedin} alt={linkedin} />
             </a>
-            <a href="#">
+            <a href="https://github.com/MilosIl">
               <img src={github} alt={github} />
             </a>
           </div>
