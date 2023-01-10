@@ -8,7 +8,9 @@ const Hero = () => {
 
 
   return (
-    <section>
+    <section className="hero-section">
+      <div className="hero-left-side">
+
       <p>Hi I'm Milos</p>
       <h1>
         <span className="blinking-cursor " aria-label={selectedTitle}>
@@ -26,6 +28,10 @@ const Hero = () => {
       >
         Checkout my work
       </Link>
+      </div>
+      <div className="hero-right-side">
+        hero-right-side
+      </div>
     </section>
   );
 };

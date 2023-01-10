@@ -74,6 +74,24 @@ body {
 
 /* hero */
 
+.hero-section{
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  align-items: center;
+  height: 100vh;
+}
+.hero-left-section{
+  
+}
+
+.hero-right-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */
 .blinking-cursor::after {
   content: "|";
@@ -394,6 +412,9 @@ footer {
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 2;
+  }
+  .hero-section{
+    flex-direction: column;
   }
 
   .card-container {
