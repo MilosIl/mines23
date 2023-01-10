@@ -1,16 +1,9 @@
 import Accordion from "../Components/Accordion";
 
-
 const Questions = () => {
-  
-  function link2(){
-    return(
-      <span><a href="#">link</a></span>
-    )
-  }
- 
+   
   // da se vidi samo rec link(a href da vodi)
-  const link = link2
+
   return (
     <section>
       <h3>FAQ</h3>
@@ -24,7 +17,7 @@ const Questions = () => {
       />
       <Accordion
         question="Buy me a coffee / beer"
-        content={`You can do that by going to a ${link} or just message me so we can drink it together`}
+        content={`You can do that by going to a ${<a href="#">link</a>} or just message me so we can drink it together`}
       />
     </section>
   );
