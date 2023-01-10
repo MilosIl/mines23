@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+
 export enum Phase {
   Typing,
   Pausing,
   Deleting,
 }
+
 const TYPING_INTERVAL = 150;
 const PAUSE_INTERVAL = 1500;
 const DELETE_INTERVAL = 150;
@@ -18,6 +20,7 @@ const useBlinkEffect = (
   const [selectedTitle, setSelectedTitle] = useState(0);
   const [phase, setPhase] = useState(Phase.Typing);
   const [title, setTitle] = useState("");
+
   useEffect(() => {
     switch (phase) {
       case Phase.Typing: {
@@ -28,8 +31,7 @@ const useBlinkEffect = (
         if (nextTypedWord === title) {
           setPhase(Phase.Pausing);
           return;
-        }
-        
+        }        
         const timeout = setTimeout(() => {
           setTitle(nextTypedWord);
         }, TYPING_INTERVAL);
@@ -66,6 +68,8 @@ const useBlinkEffect = (
       }
     }
   }, [jobTitles, title, phase, selectedTitle]);
+
   return { title, selectedTitle: title[selectedTitle], phase };
 };
+
 export default useBlinkEffect;
