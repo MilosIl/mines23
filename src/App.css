@@ -9,6 +9,9 @@
   --border-radius: 0.5em;
   --primary: blue;
   --secondary: green;
+  --steel-blue: #4682B4;
+  --navy-blue:#000080;
+  --sky-blue:#87CEEB;
 }
 
 body {
@@ -80,7 +83,7 @@ h2{
 
 }
 h3{
-  
+
 }
 
 .hero-section{
