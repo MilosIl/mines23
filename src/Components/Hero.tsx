@@ -10,12 +10,13 @@ const Hero = () => {
       <div className="hero-left-side">
 
       <p>Hi I'm Milos</p>
-      <h1>
+      <p>
         <span className="blinking-cursor " aria-label={selectedTitle}>
           {title}
         </span>
         developer
-      </h1>
+      </p>
+      <h1>Building the websites of tomorrow, today</h1>
       <Link
         to="projects"
         smooth={true}
