@@ -17,6 +17,10 @@
   --one-background:#F5F5F5;
   --one-text-heading:#9E9E9E;
   --one-accents-hover:#212121;
+
+  --two-background:#E3F2FD;
+  --two-text-heading:#90caf9;
+  --two-accents-hover:#1565c0;
 }
 
 body {
