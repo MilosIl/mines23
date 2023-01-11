@@ -9,9 +9,14 @@
   --border-radius: 0.5em;
   --primary: blue;
   --secondary: green;
+
   --steel-blue: #4682B4;
   --navy-blue:#000080;
   --sky-blue:#87CEEB;
+
+  --one-background:#F5F5F5;
+  --one-text-heading:#9E9E9E;
+  --one-accents-hover:#212121;
 }
 
 body {
