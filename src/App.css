@@ -83,6 +83,10 @@ font-size: 2rem;
 h3{
 font-size: 1rem;
 }
+h2:hover{
+  color: var(--primary-blue);
+  user-select: none;
+}
 
 .hero-section{
   display: flex;
