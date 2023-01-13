@@ -21,6 +21,9 @@ h2 {
 h3 {
   font-size: 1rem;
 }
+p{
+  font-size: 1rem;
+}
 h2:hover {
   color: var(--primary-blue);
   user-select: none;
