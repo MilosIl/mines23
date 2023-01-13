@@ -6,19 +6,19 @@ const Projects = () => {
       <h2>Projects</h2>
       <section className="project-section" id="projects">
         <Project
-          name={"Doggo"}
+          name={"Hair studio"}
           description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"#"}
         />
         <Project
-          name={"Doggo"}
+          name={"Netflix"}
           description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"#"}
         />
         <Project
-          name={"Doggo"}
+          name={"Favorite dog"}
           description={"kratka varijanta teksta koja treba da se vidi"}
           image={"nema slike"}
           links={"google.com"}
