@@ -21,7 +21,7 @@ h2 {
 h3 {
   font-size: 1rem;
 }
-p{
+p {
   font-size: 1rem;
 }
 h2:hover {
@@ -125,6 +125,7 @@ body {
   outline: none;
   border: none;
   user-select: none;
+  z-index: -1;
 }
 
 /* projects */
