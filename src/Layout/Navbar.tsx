@@ -74,7 +74,7 @@ function Navbar() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={1000}
             onClick={closeMobileMenu}
           >
@@ -85,7 +85,7 @@ function Navbar() {
             to="about"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={1000}
             onClick={closeMobileMenu}
           >
@@ -96,7 +96,7 @@ function Navbar() {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={1000}
             onClick={closeMobileMenu}
           >

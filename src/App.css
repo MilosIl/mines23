@@ -39,6 +39,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: var(--text-color);
+  scroll-padding-top: .5em;
 }
 .container {
   max-width: 90%;
@@ -209,7 +210,7 @@ body {
   padding: 1em;
   margin: 0 1em;
   border: 1px solid transparent;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius);
   transition: transform 0.6s ease;
   width: fit-content;
 }
@@ -257,6 +258,8 @@ body {
 .contact-container {
   display: flex;
   justify-content: space-around;
+  position: relative;
+  z-index: -1;
 }
 .input {
   width: 100%;
@@ -423,7 +426,6 @@ footer {
     position: absolute;
     top: 0.5em;
     right: 1em;
-
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 2;
@@ -436,7 +438,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    position: relative;
+    z-index: -1;
   }
   .project-section {
     flex-wrap: wrap;
