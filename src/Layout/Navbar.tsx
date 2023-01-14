@@ -1,21 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState  } from "react";
 import { Link } from "react-scroll";
 import useShowButton from "../Hooks/useShowButton";
 
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
-  useShowButton()
+  useShowButton();
+
   const handleClick = () => setIsClick(!isClick);
   const closeMobileMenu = () => setIsClick(false);
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 769) {
-  //     setIsClick(false);
-  //   } else {
-  //     setIsClick(true);
-  //   }
-  // };
+
   const changeBackground = () => {
     if (window.scrollY >= 60) {
       setNav(false);
@@ -24,11 +19,7 @@ function Navbar() {
     }
   };
 
-  // useEffect(() => {
-  //   showButton();
-  // }, []);
 
-  // window.addEventListener("resize", useShowButton)
   window.addEventListener("scroll", changeBackground);
   return (
     <header>

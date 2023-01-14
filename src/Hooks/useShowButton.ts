@@ -1,8 +1,6 @@
 import {useEffect, useState} from 'react'
 
-type Props = {}
-
-const useShowButton = (props: Props) => {
+const useShowButton = () => {
     const [isClick, setIsClick] = useState(false);
     const showButton = () => {
         if (window.innerWidth <= 769) {
