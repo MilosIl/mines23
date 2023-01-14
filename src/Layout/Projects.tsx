@@ -7,19 +7,22 @@ const Projects = () => {
       <section className="project-section" id="projects">
         <Project
           name={"Hair studio"}
-          description={"kratka varijanta teksta koja treba da se vidi"}
+          description={"Website that you can make a appointment for your hair"}
+          technologies={['React','Mui']}
           image={"nema slike"}
           links={"#"}
         />
         <Project
           name={"Netflix"}
-          description={"kratka varijanta teksta koja treba da se vidi"}
+          description={"Clone of netflix, as a final project from Scrimba"}
+          technologies={['React','Firebase']}
           image={"nema slike"}
           links={"#"}
         />
         <Project
           name={"Favorite dog"}
-          description={"kratka varijanta teksta koja treba da se vidi"}
+          description={"Website where you can search about information of your favorite dog and save them for later"}
+          technologies={['Next.js', 'tailwindcss']}
           image={"nema slike"}
           links={"google.com"}
         />

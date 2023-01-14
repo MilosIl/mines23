@@ -6,31 +6,27 @@ const Hero = () => {
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
   return (
-    <section className="hero-section" id='home'>
+    <section className="hero-section" id="home">
       <div className="hero-left-side">
-
-      <p>Hi I'm Milos</p>
-      <p>
-        <span className="blinking-cursor " aria-label={selectedTitle}>
-          {title}
-        </span>
-        developer
-      </p>
-      <h1>Building the websites of tomorrow, today</h1>
-      <Link
-        to="projects"
-        smooth={true}
-        spy={true}
-        offset={-122}
-        duration={1000}
-        className="btn"
-      >
-        Checkout my work
-      </Link>
+        <p>Hi I'm Milos</p>
+        <p>
+          <span className="blinking-cursor " aria-label={selectedTitle}>
+            {title}
+          </span>
+          developer
+        </p>
+        <h1>Building the websites of tomorrow, today</h1>
+        <Link
+          to="projects"
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="btn"
+        >
+          Checkout my work
+        </Link>
       </div>
-      <div className="hero-right-side">
-        hero-right-side
-      </div>
+      <div className="hero-right-side">hero-right-side</div>
     </section>
   );
 };
