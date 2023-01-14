@@ -13,7 +13,8 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  margin: 1em 0;
 }
 h2 {
   font-size: 2rem;
@@ -100,13 +101,18 @@ body {
   height: 100vh;
 }
 .hero-left-section {
-}
-
-.hero-right-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.title{
+  font-size: 2rem;
+}
+.title:last-of-type{
+  margin-bottom: 2em;
+}
+.hero-right-section {
 }
 
 /* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */

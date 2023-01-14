@@ -8,8 +8,8 @@ const Hero = () => {
   return (
     <section className="hero-section" id="home">
       <div className="hero-left-side">
-        <p>Hi I'm Milos</p>
-        <p>
+        <p className="title">Hi I'm Milos</p>
+        <p className="title">
           <span className="blinking-cursor " aria-label={selectedTitle}>
             {title}
           </span>
