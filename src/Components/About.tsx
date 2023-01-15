@@ -73,7 +73,7 @@ const About = () => {
         />
       </div>
         {/* naslov treba da se promeni */}
-        <p>Title of technologies what i use</p>
+        <p className="icons-title">Web Technologies</p>
       <div className="icons-container">
         {iconsGroup.map((icon:string,index:number)=>{
           return(

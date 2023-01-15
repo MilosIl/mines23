@@ -16,7 +16,7 @@
 h1 {
   font-size: 2.6rem;
   margin: 1em 0;
-  width: 30ch;
+  max-width: 30ch;
 }
 h2 {
   font-size: 2rem;
@@ -48,7 +48,9 @@ body {
 }
 .container {
   max-width: 90%;
+  padding: 0 1em;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 /* navigation */
@@ -105,10 +107,7 @@ body {
   height: 100vh;
 }
 .hero-left-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
 }
 .title{
   font-size: 2rem;
@@ -228,6 +227,9 @@ body {
   transition: transform 0.6s ease;
   width: fit-content;
 }
+.card:last-of-type{
+  margin-bottom: 2em;
+}
 .card:hover {
   border: 1px solid var(--primary-blue);
 }
@@ -248,6 +250,12 @@ body {
 .card-body {
   font-size: 1rem;
   text-align: center;
+}
+.icons-title{
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1em;
 }
 .icons-container {
   margin-top: 1em;
