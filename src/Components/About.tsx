@@ -14,50 +14,49 @@ import firebase from "../assets/mdi_firebase.svg";
 import git from "../assets/mdi_git.svg";
 import figma from "../assets/mdi_figma.svg";
 
-const iconsGroup=[html,css,javascript,typescript,react,next,tailwind,mui,bootstrap,mongodb,firebase,git,figma]
+const iconsGroup = [
+  html,
+  css,
+  javascript,
+  typescript,
+  react,
+  next,
+  tailwind,
+  mui,
+  bootstrap,
+  mongodb,
+  firebase,
+  git,
+  figma,
+];
 
 const About = () => {
   return (
     <section className="about-section" id="about">
       <h2>About me</h2>
-
-      <p>Im a self taught programmer with determination to learn more.</p>
-      
       <p>
-        Web development is one of my passions, that can give you satisfaction
-        and joy while working on a new project or just learning to becoming a
-        full stack developer
+       As a self-taught front-end developer, I am excited to present my
+        portfolio to you. My name is Miloš, and I become skilled in the design,
+        development and deployment of visually pleasing and user-friendly
+        websites and web applications. 
+        In this portfolio, you will find examples of my work, showcasing my
+        capabilities and skills as a self-taught web developer. I am eager
+        to take on new challenges and continue to improve my skills and 
+        confident that I can deliver high-quality work.
+        Throughout my journey as a self-taught developer, I have gained valuable
+        experience in understanding user-centered design, web accessibility and
+        responsive design. I am a strong collaborator and communicator, able to
+        understand the needs of my clients and translate them into visually
+        pleasing and functional websites. I have been passionate about web development for quite some time now and
+        taught myself the skills needed to become a proficient front-end
+        developer. I have a strong understanding of web development technologies
+        such as HTML, CSS, JavaScript and various front-end frameworks like
+        React and Nextjs. I'm also well-versed in design tools such as Figma.  I am a quick learner and always eager to improve my skills. I have a
+        great attention to detail and dedicated to producing high-quality,
+        scalable and efficient code. I'm always looking for ways to stay
+        up-to-date with the latest web development technologies and trends.
       </p>
 
-      <p>
-        One of the reasons i like design is concept of beauty on a first look.
-        To make things that are efficient as user would come back and use it
-        again.
-      </p>
-
-      <p>
-        Self thought developer, with passion for new technologies. And ready to
-        make a great product from your idea.
-      </p>
-
-      <p>
-        As developer, I love solving new puzzles and questions that can be
-        thought as puzzle finished
-      </p>
-
-      <p>
-        Problem solver, I have personal way of handling a problem.. First part
-        is to make it into small portions and to have a clear understanding of
-        what is that problem and how it should be fixed
-      </p>
-
-      <p>
-        Every developer dream is that hes product is used. That is going to make
-        a change in (....)
-      </p>
-
-      <p>to challenge myself and will to learn more</p>
-      
       <div className="card-container">
         <Card
           title="Team player"
@@ -72,13 +71,11 @@ const About = () => {
           body="Open for new projects and suggestions for improvement."
         />
       </div>
-        {/* naslov treba da se promeni */}
-        <p className="icons-title">Web Technologies</p>
+      {/* naslov treba da se promeni */}
+      <p className="icons-title">Web Technologies</p>
       <div className="icons-container">
-        {iconsGroup.map((icon:string,index:number)=>{
-          return(
-            <img key={index} src={icon} alt={icon}/>
-          )
+        {iconsGroup.map((icon: string, index: number) => {
+          return <img key={index} src={icon} alt={icon} />;
         })}
       </div>
     </section>
