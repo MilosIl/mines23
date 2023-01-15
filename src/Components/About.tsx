@@ -71,7 +71,6 @@ const About = () => {
           body="Open for new projects and suggestions for improvement."
         />
       </div>
-      {/* naslov treba da se promeni */}
       <p className="icons-title">Web Technologies</p>
       <div className="icons-container">
         {iconsGroup.map((icon: string, index: number) => {
