@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import useShowButton from "../Hooks/useShowButton";
 
@@ -71,7 +71,7 @@ function Navbar() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-60}
+            offset={-70}
             duration={1000}
             onClick={closeMobileMenu}
           >

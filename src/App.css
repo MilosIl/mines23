@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -14,18 +14,20 @@
 
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin: 1em 0;
   width: 30ch;
 }
 h2 {
   font-size: 2rem;
+  margin: 1em 0;
 }
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 p {
   font-size: 1rem;
+  line-height: 1.4;
 }
 h2:hover {
   color: var(--primary-blue);
@@ -404,8 +406,8 @@ footer {
 /* media query */
 @media(prefers-color-scheme:dark){
   :root{
-    --bg-color: #424242;
-    --text-color: #e4e4e4;
+    --bg-color: #e5e5e5;
+    --text-color: #212121;
   }
 }
 
