@@ -8,14 +8,14 @@ const Hero = () => {
   return (
     <section className="hero-section" id="home">
       <div className="hero-left-side">
-        <p className="title">Hi I'm Milos</p>
+        <p className="title">Hi, I'm Milos</p>
         <p className="title">
           <span className="blinking-cursor " aria-label={selectedTitle}>
             {title}
           </span>
           developer
         </p>
-        <h1>Building the websites of tomorrow, today</h1>
+        <h1>Building the websites of <span className="highlight">tomorrow</span>, today</h1>
         <Link
           to="projects"
           smooth={true}

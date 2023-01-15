@@ -6,7 +6,9 @@ import Projects from "./Layout/Projects";
 import Footer from "./Layout/Footer";
 import Navbar from "./Layout/Navbar";
 
+
 function App() {
+  
   return (
     <div className="container">
       <Navbar />
