@@ -50,8 +50,8 @@ const About = () => {
         pleasing and functional websites. I have been passionate about web development for quite some time now and
         taught myself the skills needed to become a proficient front-end
         developer. I have a strong understanding of web development technologies
-        such as HTML, CSS, JavaScript and various front-end frameworks like
-        React and Nextjs. I'm also well-versed in design tools such as Figma.  I am a quick learner and always eager to improve my skills. I have a
+        such as HTML, CSS, JavaScript and library React, front-end frameworks like
+        Nextjs. I'm also well-versed in design tools such as Figma.  I am a quick learner and always eager to improve my skills. I have a
         great attention to detail and dedicated to producing high-quality,
         scalable and efficient code. I'm always looking for ways to stay
         up-to-date with the latest web development technologies and trends.
