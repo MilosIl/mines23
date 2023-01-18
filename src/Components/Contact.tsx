@@ -75,7 +75,7 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
           </div>
 
-          <button className="btn" type="submit">
+          <button className="btn btn-send"  type="submit">
             Send message
           </button>
         </form>

@@ -134,6 +134,9 @@ body {
   outline: none;
   border: none;
 }
+.btn-send{
+  margin-top: -1.5em;
+}
 
 /* projects */
 .project-section {
