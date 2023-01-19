@@ -442,6 +442,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
   }
   .nav-menu {
     display: flex;
@@ -484,6 +485,7 @@ footer {
     justify-content: center;
     position: relative;
     z-index: -1;
+    margin-bottom: 0;
   }
   .card:last-of-type {
     margin-bottom: 2em;
