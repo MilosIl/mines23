@@ -8,14 +8,14 @@ const Projects = () => {
         <Project
           name={"Hair studio"}
           description={"Website that you can make a appointment for your hair"}
-          technologies={['React','Mui']}
+          technologies={['React','Mui', 'Express','MongoDb']}
           image={"nema slike"}
           links={"#"}
         />
         <Project
           name={"Netflix"}
           description={"Clone of netflix, as a final project from Scrimba"}
-          technologies={['React','Firebase']}
+          technologies={['React',"Express",'Firebase']}
           image={"nema slike"}
           links={"#"}
         />
