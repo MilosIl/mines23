@@ -68,11 +68,11 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              rows={5}
+              rows={7}
               className="textarea"
             />
 
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message:</label>
           </div>
 
           <button className="btn btn-send"  type="submit">

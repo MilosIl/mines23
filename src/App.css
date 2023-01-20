@@ -287,7 +287,6 @@ body {
 .contact-container {
   display: flex;
   justify-content: space-around;
-  position: relative;
 }
 .input {
   padding: 0.5em;
@@ -296,10 +295,11 @@ body {
   background-color: transparent;
   outline: none;
   color: var(--text-color);
+  width: 100%;
 }
 .input-holder {
+  width: 20em;
   position: relative;
-  z-index: 0;
 }
 .input-holder label {
   position: absolute;
@@ -314,12 +314,13 @@ body {
   top: -1em;
 }
 .input-holder textarea + label {
-  padding-top: 0.25em;
-  padding-left: 0.5em;
+  padding-top: 0.5em;
+  padding-left: 0.75em;
 }
 .input-holder textarea:focus + label,
 .input-holder textarea:valid + label {
-  top: -1.5em;
+  top: -2em;
+  left: -0.7em;
 }
 
 .form {
@@ -344,11 +345,11 @@ body {
   margin-top: 1.45em;
   cursor: pointer;
   position: relative;
-  transition: all ease-out ;
+  transition: all ease-out;
 }
-.contact-email:hover{
+.contact-email:hover {
   text-decoration: underline;
-  text-underline-offset: .25em;
+  text-underline-offset: 0.25em;
   color: var(--primary-blue);
 }
 .contact-email::before {
@@ -358,7 +359,7 @@ body {
 .contact-email:hover::before {
   content: "Click to copy";
   position: absolute;
-  color:var(--text-color);
+  color: var(--text-color);
   background: rgb(156, 156, 156);
   border-radius: var(--border-radius);
   padding: 0.5em;
@@ -453,7 +454,6 @@ footer {
     right: -100%;
     opacity: 10;
     transition: all 0.5s ease;
-
   }
   .nav a:hover {
     font-weight: 500;
