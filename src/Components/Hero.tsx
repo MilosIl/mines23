@@ -19,7 +19,7 @@ const Hero = () => {
         <Link
           to="projects"
           smooth={true}
-          offset={-70}
+          offset={-30}
           duration={500}
           className="btn"
         >

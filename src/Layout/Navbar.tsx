@@ -71,7 +71,7 @@ function Navbar() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-30}
             duration={1000}
             onClick={closeMobileMenu}
           >
