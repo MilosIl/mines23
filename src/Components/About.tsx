@@ -41,7 +41,10 @@ const About = () => {
         I am a highly motivated, efficient and detail-oriented.Through my journey as a self-taught developer, I have gained a lot of experience and understanding of client needs. I'm dedicated to the needs of the clients, how I can solve the problem in the best way. I have a good understanding of the needs of web accessibility and responsive design
       </p>
       <p>
-      Path as a self-taught front-end developer, I understand the challenges and rewards of self-learning.  I am always looking for ways to improve my skills and stay up-to-date with the latest web development technologies and trends.
+      I possess a strong understanding of web development technologies such as HTML, CSS, JavaScript and TypeScript and I am well-versed in front-end frameworks like React, NextJS. I have experience working with CSS and  frameworks like Tailwind CSS, Material-UI and Bootstrap. I have also proficient in design tools such as Figma. And proficient in Git for version control and updateing code.
+      </p>
+      <p>
+      Path as a self-taught front-end developer, it have their the challenges and rewards of self-learning.  I am always looking for ways to improve my skills and stay up-to-date with the latest web development technologies and trends.
       </p>
 
       <div className="card-container">
