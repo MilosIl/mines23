@@ -84,7 +84,7 @@ const Contact = () => {
           <p>Feel free to reach out if you are interested in working with me</p>
           <span className="contact-email" onClick={handleCopy}>milos.ilic@mines-dev.com</span>
           <div className="contact-icon">
-            <a href="#">
+            <a href="www.linkedin.com/in/milos-ilic-dev">
               <img src={linkedin} alt={linkedin} />
             </a>
             <a href="https://github.com/MilosIl">
