@@ -1,5 +1,4 @@
 import React, { FormEventHandler, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import linkedin from "../assets/mdi_linkedin.svg";
 import github from "../assets/mdi_github.svg";
@@ -24,6 +23,7 @@ const Contact = () => {
     setName("");
     setEmail("");
     setMessage("");
+    alert('Email was sent!')
   };
   return (
     <section id="contact">
