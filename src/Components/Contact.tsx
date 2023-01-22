@@ -3,27 +3,37 @@ import React, { FormEventHandler, useRef, useState } from "react";
 import linkedin from "../assets/mdi_linkedin.svg";
 import github from "../assets/mdi_github.svg";
 
+interface IFormData{
+  name:string,
+  email:string,
+  message:string
+}
+
+
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState<IFormData>({ name: '', email: '', message: '' });
+
 
   const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
     navigator.clipboard.writeText("milos.ilic@mines-dev.com");
   };
-
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
-    const form = formRef.current;
-    if (!form) return;
-    const poruka = Object.fromEntries(new FormData(form));
-    console.log("poruka>>>", poruka);
-
-    setName("");
-    setEmail("");
-    setMessage("");
-    alert('Email was sent!')
+    try {
+      await fetch('/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      console.log('formData', formData)
+      alert('Email sent successfully');
+    } catch (err) {
+      alert(err);
+    }
   };
   return (
     <section id="contact">
@@ -32,14 +42,13 @@ const Contact = () => {
         <form
           className="form"
           onSubmit={handleSubmit}
-          ref={formRef}
           autoComplete="off"
         >
           <div className="input-holder">
             <input
               id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={formData.name}
+              onChange={handleChange}
               type="text"
               name="name"
               className="input"
@@ -53,8 +62,8 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={handleChange}
               required
             />
             <label className="label" htmlFor="email">
@@ -65,8 +74,8 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={formData.message}
+              onChange={handleChange}
               required
               rows={7}
               className="textarea"
