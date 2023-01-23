@@ -1,35 +1,35 @@
-import React, { FormEventHandler, useRef, useState } from "react";
+import React, { FormEventHandler, useState } from 'react';
+import axios from 'axios';
+import linkedin from '../assets/mdi_linkedin.svg';
+import github from '../assets/mdi_github.svg';
 
-import linkedin from "../assets/mdi_linkedin.svg";
-import github from "../assets/mdi_github.svg";
-
-interface IFormData{
-  name:string,
-  email:string,
-  message:string
+interface IFormData {
+  name: string;
+  email: string;
+  message: string;
 }
 
-
-const Contact = () => {
-  const [formData, setFormData] = useState<IFormData>({ name: '', email: '', message: '' });
-
+const Contact:React.FC = () => {
+  const [formData, setFormData] = useState<IFormData>({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
-    navigator.clipboard.writeText("milos.ilic@mines-dev.com");
+    navigator.clipboard.writeText('milos.ilic@mines-dev.com');
   };
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await fetch('/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      console.log('formData', formData)
+      await axios.post('/send-email',formData)
+      console.log('formData', formData);
       alert('Email sent successfully');
     } catch (err) {
       alert(err);
@@ -39,11 +39,7 @@ const Contact = () => {
     <section id="contact">
       <h2>Contact me</h2>
       <div className="contact-container">
-        <form
-          className="form"
-          onSubmit={handleSubmit}
-          autoComplete="off"
-        >
+        <form className="form" onSubmit={handleSubmit} autoComplete="off">
           <div className="input-holder">
             <input
               id="name"
@@ -84,14 +80,16 @@ const Contact = () => {
             <label htmlFor="message">Message:</label>
           </div>
 
-          <button className="btn btn-send"  type="submit">
+          <button className="btn btn-send" type="submit">
             Send message
           </button>
         </form>
 
         <div>
           <p>Feel free to reach out if you are interested in working with me</p>
-          <span className="contact-email" onClick={handleCopy}>milos.ilic@mines-dev.com</span>
+          <span className="contact-email" onClick={handleCopy}>
+            milos.ilic@mines-dev.com
+          </span>
           <div className="contact-icon">
             <a href="www.linkedin.com/in/milos-ilic-dev">
               <img src={linkedin} alt={linkedin} />
