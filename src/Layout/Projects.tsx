@@ -21,10 +21,11 @@ const Projects = () => {
         />
         <Project
           name={"Favorite dog"}
-          description={"Website where you can search about information of your favorite dog and save them for later"}
+          description={"Website where you can search for information of your favorite dog and save them for later"}
           technologies={['Next.js', 'tailwindcss']}
           image={"nema slike"}
           links={"google.com"}
+          
         />
       </section>
     </div>

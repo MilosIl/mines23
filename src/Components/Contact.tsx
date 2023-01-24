@@ -28,7 +28,12 @@ const Contact:React.FC = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('/send-email',formData)
+      // await axios.post('/send-email',formData)
+      fetch('/send-email',{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
       console.log('formData', formData);
       alert('Email sent successfully');
     } catch (err) {
@@ -76,7 +81,6 @@ const Contact:React.FC = () => {
               rows={7}
               className="textarea"
             />
-
             <label htmlFor="message">Message:</label>
           </div>
 
