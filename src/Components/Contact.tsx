@@ -90,7 +90,7 @@ const Contact:React.FC = () => {
         </form>
 
         <div>
-          <p>Feel free to reach out if you are interested in working with me</p>
+          <p>Feel free to reach out if you are interested in working with me or for a chat </p>
           <span className="contact-email" onClick={handleCopy}>
             milos.ilic@mines-dev.com
           </span>
