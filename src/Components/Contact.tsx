@@ -2,12 +2,16 @@ import React, { FormEventHandler, useState } from 'react';
 import axios from 'axios';
 import linkedin from '../assets/mdi_linkedin.svg';
 import github from '../assets/mdi_github.svg';
-
+import {z} from 'zod'
 interface IFormData {
   name: string;
   email: string;
   message: string;
 }
+const nameValidation = z.string().min(3);
+const emailValidation = z.string().email();
+const messageValidation = z.string().email();
+
 
 const Contact:React.FC = () => {
   const [formData, setFormData] = useState<IFormData>({
