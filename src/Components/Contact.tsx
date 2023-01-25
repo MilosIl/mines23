@@ -12,6 +12,11 @@ const nameValidation = z.string().min(3);
 const emailValidation = z.string().email();
 const messageValidation = z.string().email();
 
+const formValidation = z.object({
+  name: z.string().min(3),
+  email: z.string().email(),
+  message: z.string()
+})
 
 const Contact:React.FC = () => {
   const [formData, setFormData] = useState<IFormData>({
