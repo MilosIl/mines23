@@ -6,10 +6,8 @@ interface IAccordion {
   question: string;
   content: string;
 }
-
 const Accordion = ({ question, content }: IAccordion) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleQuestion = () => {
     setIsOpen(!isOpen);
   };
