@@ -1,32 +1,37 @@
-import React, { FormEventHandler, useState } from 'react';
-import axios from 'axios';
-import linkedin from '../assets/mdi_linkedin.svg';
-import github from '../assets/mdi_github.svg';
-import {z} from 'zod'
+import React, { FormEventHandler, useState } from "react";
+import axios from "axios";
+import linkedin from "../assets/mdi_linkedin.svg";
+import github from "../assets/mdi_github.svg";
+import { z } from "zod";
 interface IFormData {
   name: string;
   email: string;
   message: string;
 }
-const nameValidation = z.string().min(3);
-const emailValidation = z.string().email();
-const messageValidation = z.string().email();
+const nameValidation = z.string().min(1, { message: "Name is required" });
+const emailValidation = z
+  .string()
+  .min(1, { message: "Email is required" })
+  .email({
+    message: "Must be a valid email",
+  });
+const messageValidation = z.string().min(1);
 
 const formValidation = z.object({
   name: z.string().min(3),
   email: z.string().email(),
-  message: z.string()
-})
+  message: z.string(),
+});
 
-const Contact:React.FC = () => {
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState<IFormData>({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
-    navigator.clipboard.writeText('milos.ilic@mines-dev.com');
+    navigator.clipboard.writeText("milos.ilic@mines-dev.com");
   };
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,13 +43,13 @@ const Contact:React.FC = () => {
     event.preventDefault();
     try {
       // await axios.post('/send-email',formData)
-      fetch('/send-email',{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      console.log('formData', formData);
-      alert('Email sent successfully');
+      fetch("/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      console.log("formData", formData);
+      alert("Email sent successfully");
     } catch (err) {
       alert(err);
     }
@@ -97,9 +102,11 @@ const Contact:React.FC = () => {
             Send message
           </button>
         </form>
-
         <div>
-          <p>Feel free to reach out if you are interested in working with me or for a chat </p>
+          <p>
+            Feel free to reach out if you are interested in working with me or
+            for a chat{" "}
+          </p>
           <span className="contact-email" onClick={handleCopy}>
             milos.ilic@mines-dev.com
           </span>

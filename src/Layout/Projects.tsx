@@ -22,7 +22,7 @@ const Projects = () => {
         <Project
           name={"Favorite dog"}
           description={"Website where you can search for information of your favorite dog and save them for later"}
-          technologies={['Next.js', 'tailwindcss']}
+          technologies={['Next.js', 'Tailwindcss']}
           image={"nema slike"}
           links={"google.com"}
           
