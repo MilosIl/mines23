@@ -105,6 +105,7 @@ body {
   height: 100vh;
 }
 .hero-left-section {
+  padding: 2em;
 }
 .title {
   font-size: 2rem;
@@ -116,6 +117,7 @@ body {
   margin-bottom: 2em;
 }
 .hero-right-section {
+  
 }
 
 /* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */
