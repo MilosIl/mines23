@@ -27,13 +27,12 @@ const Project = ({
         {technologies.map((technology, index) => {
           return <li key={index}>{technology}</li>;
         })}
-        {/* da se na hover vidi ikonica */}
       </ul>
       <div className="project-links">
         <a href={links}>
           <img src={github} alt={github} />
         </a>
-        <a href={links}> see demo</a>
+        <a href={links}>see demo</a>
       </div>
     </article>
   );

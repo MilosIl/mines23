@@ -117,7 +117,7 @@ body {
   margin-bottom: 2em;
 }
 .hero-right-section {
-  
+
 }
 
 /* treba da se napravi .end-cursor sa content:'|' kada se zavrsi sa kucanjem reci da stane */
@@ -212,6 +212,10 @@ body {
   text-decoration: none;
   color: var(--text-color);
 }
+.project-links>a:nth-child(2):hover{
+  font-weight: bold;
+}
+
 
 /* about section */
 .about-section {
