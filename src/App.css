@@ -96,7 +96,6 @@ body {
 }
 
 /* hero */
-
 .hero-section {
   display: flex;
   justify-content: center;
@@ -193,7 +192,6 @@ body {
 .project-technologies:hover {
   color: rgba(0, 0, 0, 0);
 }
-
 .projects-name {
   font-size: 1rem;
 }
