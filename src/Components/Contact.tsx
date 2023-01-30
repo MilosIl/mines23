@@ -43,11 +43,11 @@ const Contact: React.FC = () => {
     event.preventDefault();
     try {
       // await axios.post('/send-email',formData)
-      fetch("/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      // fetch("/send-email", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
       console.log("formData", formData);
       alert("Email sent successfully");
     } catch (err) {
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
         <div>
           <p>
             Feel free to reach out if you are interested in working with me or
-            for a chat{" "}
+            for a chat
           </p>
           <span className="contact-email" onClick={handleCopy}>
             milos.ilic@mines-dev.com
