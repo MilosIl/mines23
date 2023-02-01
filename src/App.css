@@ -454,7 +454,6 @@ footer {
   .hero-section {
     flex-direction: column;
   }
-
   .card-container {
     flex-direction: column;
     align-items: center;
@@ -469,13 +468,8 @@ footer {
   .project-section {
     flex-wrap: wrap;
   }
-
   .contact-container {
     flex-direction: column;
-  }
-
-  .accordion {
-    width: 90%;
   }
 }
 @media (max-width: 375px) {
