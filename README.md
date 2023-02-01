@@ -1,2 +1,5 @@
 # Personal protfolio
 
+Technologies:
+
+Profile:
