@@ -47,7 +47,7 @@ body {
 .container {
   max-width: 90%;
   padding-inline: 1em;
-  margin: 0 auto;
+  margin-inline: auto;
   overflow: hidden;
 }
 
