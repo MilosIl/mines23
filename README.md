@@ -1,8 +1,10 @@
 # Personal portfolio
 
-Portfolio that showcase some of my work, that have MVP status
+Perosinal portfolio that showcase some of my work
 
-text to talk something about yourself in two sentaces
+Building website and web applications is one of the biggest joy that gives meaning to something
+
+
 
 
 Technologies used to build site:
