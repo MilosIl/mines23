@@ -114,8 +114,8 @@ body {
   position:relative
 }
 .highlight::after{
-  content:'',
-  position:absolute,
+  content:'';
+  position:absolute;
   inset: 0;
 }
 .title:last-of-type {
