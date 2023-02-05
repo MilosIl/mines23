@@ -111,6 +111,12 @@ body {
 }
 .highlight {
   color: var(--primary-blue);
+  position:relative
+}
+.highlight::after{
+  content:'',
+  position:absolute,
+  inset: 0;
 }
 .title:last-of-type {
   margin-bottom: 2em;
