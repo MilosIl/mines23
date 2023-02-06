@@ -43,11 +43,11 @@ const Contact: React.FC = () => {
     event.preventDefault();
     try {
       // await axios.post('/send-email',formData)
-      // fetch("/send-email", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(formData),
-      // });
+      fetch("/send-email", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       console.log("formData", formData);
       alert("Email sent successfully");
     } catch (err) {
