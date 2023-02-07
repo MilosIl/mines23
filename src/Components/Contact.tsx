@@ -8,19 +8,12 @@ interface IFormData {
   email: string;
   message: string;
 }
-const nameValidation = z.string().min(1, { message: "Name is required" });
-const emailValidation = z
-  .string()
-  .min(1, { message: "Email is required" })
-  .email({
-    message: "Must be a valid email",
-  });
-const messageValidation = z.string().min(1);
+
 
 const formValidation = z.object({
   name: z.string().min(3),
   email: z.string().email(),
-  message: z.string(),
+  message: z.string().min(3),
 });
 
 const Contact: React.FC = () => {
@@ -32,6 +25,7 @@ const Contact: React.FC = () => {
 
   const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
     navigator.clipboard.writeText("milos.ilic@mines-dev.com");
+    
   };
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -42,12 +36,12 @@ const Contact: React.FC = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      // await axios.post('/send-email',formData)
-      fetch("/send-email", {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      await axios.post('/send-email',formData)
+      // fetch("/send-email", {
+      //   method: "post",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
       console.log("formData", formData);
       alert("Email sent successfully");
     } catch (err) {
