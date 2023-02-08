@@ -1,5 +1,4 @@
 import React, { FormEventHandler, useState } from "react";
-import axios from "axios";
 import linkedin from "../assets/mdi_linkedin.svg";
 import github from "../assets/mdi_github.svg";
 import { z } from "zod";
@@ -36,12 +35,11 @@ const Contact: React.FC = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('/send-email',formData)
-      // fetch("/send-email", {
-      //   method: "post",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(formData),
-      // });
+      fetch("/send-email", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       console.log("formData", formData);
       alert("Email sent successfully");
     } catch (err) {
