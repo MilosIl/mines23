@@ -17,8 +17,8 @@ function Navbar() {
       setNav(true);
     }
   }
-
   window.addEventListener("scroll", changeBackground);
+  
   return (
     <header>
       <nav className={nav ? "nav change show" : "nav show"}>
