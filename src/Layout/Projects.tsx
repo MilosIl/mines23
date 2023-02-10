@@ -1,6 +1,7 @@
 import Project from "../Components/Project";
 
 const Projects = () => {
+  
   return (
     <div id="projects">
       <h2>Projects</h2>

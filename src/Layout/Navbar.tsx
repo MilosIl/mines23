@@ -5,9 +5,10 @@ import useShowButton from "../Hooks/useShowButton";
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
+  
   useShowButton();
+
   const handleClick = () => setIsClick(!isClick);
-  const closeMobileMenu = () => setIsClick(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 60) {
@@ -15,7 +16,7 @@ function Navbar() {
     } else {
       setNav(true);
     }
-  };
+  }
 
   window.addEventListener("scroll", changeBackground);
   return (
@@ -62,7 +63,7 @@ function Navbar() {
             smooth={true}
             offset={-60}
             duration={500}
-            onClick={closeMobileMenu}
+            onClick={handleClick}
           >
             Home
           </Link>
@@ -73,7 +74,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={closeMobileMenu}
+            onClick={handleClick}
           >
             Projects
           </Link>
@@ -84,7 +85,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={closeMobileMenu}
+            onClick={handleClick}
           >
             About
           </Link>
@@ -95,7 +96,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={closeMobileMenu}
+            onClick={handleClick}
           >
             Contact
           </Link>
