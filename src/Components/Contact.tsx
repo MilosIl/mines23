@@ -40,8 +40,10 @@ const Contact: React.FC = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      console.log("formData", formData);
       alert("Email sent successfully");
+      setFormData({
+        name:"", email:"", message:""
+      })
     } catch (err) {
       alert(err);
     }
