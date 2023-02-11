@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import useBlinkEffect from "../Hooks/useBlinkEffect";
 
-const Hero = () => {
+const Hero:React.FC = () => {
   const jobTitles = ["Frontend", "Front-end", "Web", "React"];
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 

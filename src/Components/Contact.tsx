@@ -1,12 +1,7 @@
 import React, { FormEventHandler, useState } from "react";
+import { z } from "zod";
 import linkedin from "../assets/mdi_linkedin.svg";
 import github from "../assets/mdi_github.svg";
-import { z } from "zod";
-interface IFormData {
-  name: string;
-  email: string;
-  message: string;
-}
 
 
 const formValidation = z.object({
@@ -15,8 +10,10 @@ const formValidation = z.object({
   message: z.string().min(3),
 });
 
+type TFormData = z.infer<typeof formValidation>
+
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<IFormData>({
+  const [formData, setFormData] = useState<TFormData>({
     name: "",
     email: "",
     message: "",

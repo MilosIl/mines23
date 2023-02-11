@@ -30,7 +30,7 @@ const iconsGroup = [
   figma,
 ];
 
-const About = () => {
+const About:React.FC = () => {
   return (
     <section className="about-section" id="about">
       <h2>About me</h2>

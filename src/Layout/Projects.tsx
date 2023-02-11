@@ -1,7 +1,6 @@
 import Project from "../Components/Project";
 
-const Projects = () => {
-  
+const Projects:React.FC = () => {
   return (
     <div id="projects">
       <h2>Projects</h2>
