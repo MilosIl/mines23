@@ -1,11 +1,12 @@
-import { useState } from "react";
-import { Link } from "react-scroll";
-import useShowButton from "../Hooks/useShowButton";
+import './navbar.css'
+import { useState } from 'react';
+import { Link } from 'react-scroll';
+import useShowButton from '../../Hooks/useShowButton';
 
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
-  
+
   useShowButton();
 
   const handleClick = () => setIsClick(!isClick);
@@ -16,12 +17,12 @@ function Navbar() {
     } else {
       setNav(true);
     }
-  }
-  window.addEventListener("scroll", changeBackground);
-  
+  };
+  window.addEventListener('scroll', changeBackground);
+
   return (
     <header>
-      <nav className={nav ? "nav change show" : "nav show"}>
+      <nav className={nav ? 'nav change show' : 'nav show'}>
         <div className="menu-icon" onClick={handleClick}>
           {isClick ? (
             <svg
@@ -30,8 +31,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="svg-icon"
-            >
+              className="svg-icon">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -45,8 +45,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="svg-icon"
-            >
+              className="svg-icon">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -55,7 +54,7 @@ function Navbar() {
             </svg>
           )}
         </div>
-        <ul className={isClick ? "nav-menu show" : "nav-menu"}>
+        <ul className={isClick ? 'nav-menu show' : 'nav-menu'}>
           <Link
             activeClass="active"
             to="home"
@@ -63,8 +62,7 @@ function Navbar() {
             smooth={true}
             offset={-60}
             duration={500}
-            onClick={handleClick}
-          >
+            onClick={handleClick}>
             Home
           </Link>
           <Link
@@ -74,8 +72,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}
-          >
+            onClick={handleClick}>
             Projects
           </Link>
           <Link
@@ -85,8 +82,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}
-          >
+            onClick={handleClick}>
             About
           </Link>
           <Link
@@ -96,8 +92,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}
-          >
+            onClick={handleClick}>
             Contact
           </Link>
         </ul>

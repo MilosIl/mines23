@@ -1,0 +1,11 @@
+.project-section {
+  display: flex;
+  gap: 2em;
+  justify-content: space-evenly;
+}
+
+@media (max-width:786px){
+  .project-section {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,42 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  align-items: center;
+  height: 100vh;
+}
+.hero-left-section {
+  padding: 2em;
+}
+.title {
+  font-size: 2rem;
+}
+.highlight {
+  color: var(--primary-blue);
+  position: relative;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.hero-right-section {
+}
+
+.blinking-cursor::after {
+  content: '|';
+  animation: blink 700ms step-start infinite;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

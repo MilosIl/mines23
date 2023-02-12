@@ -1,8 +1,9 @@
-import { Link } from "react-scroll";
-import useBlinkEffect from "../Hooks/useBlinkEffect";
+import './hero.css'
+import { Link } from 'react-scroll';
+import useBlinkEffect from '../../Hooks/useBlinkEffect';
 
-const Hero:React.FC = () => {
-  const jobTitles = ["Frontend", "Front-end", "Web", "React"];
+const Hero: React.FC = () => {
+  const jobTitles = ['Frontend', 'Front-end', 'Web', 'React'];
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
   return (
@@ -14,15 +15,17 @@ const Hero:React.FC = () => {
             {title}
           </span>
           developer
-        </p>        
-        <h1>Building the websites of <span className="highlight">tomorrow</span>, today</h1>
+        </p>
+        <h1>
+          Building the websites of <span className="highlight">tomorrow</span>,
+          today
+        </h1>
         <Link
           to="projects"
           smooth={true}
           offset={-30}
           duration={500}
-          className="btn"
-        >
+          className="btn">
           Checkout my work
         </Link>
       </div>

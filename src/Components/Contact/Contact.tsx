@@ -1,8 +1,8 @@
 import React, { FormEventHandler, useState } from "react";
+import './contact.css'
 import { z } from "zod";
-import linkedin from "../assets/mdi_linkedin.svg";
-import github from "../assets/mdi_github.svg";
-
+import linkedin from "../../assets/mdi_linkedin.svg";
+import github from "../../assets/mdi_github.svg";
 
 const formValidation = z.object({
   name: z.string().min(1,{message:"Name is required"}),

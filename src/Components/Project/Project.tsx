@@ -1,5 +1,5 @@
-import github from "../assets/mdi_github.svg";
-
+import github from "../../assets/mdi_github.svg";
+import './project.css'
 type IProject = {
   name: string;
   description: string;
