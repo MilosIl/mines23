@@ -31,18 +31,16 @@ h3 {
 p {
   font-size: 1rem;
 }
+
 body {
   font-size: 16px;
   color-scheme: light dark;
   font-family: "Roboto", sans-serif;
   background: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   color: var(--text-color);
   scroll-padding-top: 0.5em;
 }
+
 .container {
   max-width: 90%;
   padding-inline: 1em;
