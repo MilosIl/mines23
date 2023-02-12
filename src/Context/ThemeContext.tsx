@@ -8,7 +8,7 @@ const lightTheme: Theme = {
   textColor: '#212121',
 };
 const darkTheme: Theme = {
-  backgroundColor: '#d4d4d4',
+  backgroundColor: '#d3d3d3',
   textColor: '#212121',
 };
 interface ThemeContextProps {
