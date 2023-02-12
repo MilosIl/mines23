@@ -31,6 +31,11 @@ h3 {
 p {
   font-size: 1rem;
 }
+a:not(.btn):focus{
+  padding:0.2em;
+  border-radius:var(--border-radius);
+  outline:1px solid var(--primary-blue);
+}
 
 body {
   font-size: 16px;
@@ -38,7 +43,6 @@ body {
   font-family: "Roboto", sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
-  scroll-padding-top: 0.5em;
 }
 
 .container {
@@ -47,6 +51,7 @@ body {
   margin-inline: auto;
   overflow: hidden;
 }
+
 .btn {
   display: block;
   font-size: 1rem;
@@ -60,14 +65,21 @@ body {
   transition: all ease-in-out 300ms;
   user-select: none;
 }
+.btn:focus{
+  outline: 1px solid var(--primary-blue);
+  outline-offset:0.25em;
+}
 .btn:hover {
   opacity: 0.95;
   color: var(--text-color);
 }
 
-
-
 /* media query */
+@media(max-width:786px){
+  h2{
+    margin-block:1em;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

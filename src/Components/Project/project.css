@@ -1,4 +1,6 @@
 .project-card {
+  display:flex;
+  flex-direction:column;
   flex: 1;
   border: 1px solid var(--primary-blue);
   padding: 1em;
@@ -14,6 +16,7 @@
 .project-description {
   width: 100%;
   padding-block:0.5em;
+  flex-basis:20%;
 }
 .project-technologies {
   font-size: 1rem;
@@ -27,6 +30,7 @@
   list-style: none;
   text-decoration: none;
   padding: 1em;
+  flex-basis:100%;
 }
 .projects-name {
   font-size: 1rem;
@@ -51,9 +55,9 @@
 .project-links>a:nth-child(2):hover{
   font-weight: bold;
 }
-@media (max-width:786px){
-  .card{
-    padding: 1em 0;
 
+@media(max-width:786px){
+  .project-card{
+    min-width:15em;
   }
 }

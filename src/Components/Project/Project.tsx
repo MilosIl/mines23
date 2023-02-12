@@ -18,7 +18,7 @@ const Project = ({
   return (
     <article className="project-card">
       <h3 className="project-name">{name}</h3>
-      <div>
+      <div className="project-image">
         <img src={image} alt={image} />
       </div>
       <p className="project-description">{description}</p>

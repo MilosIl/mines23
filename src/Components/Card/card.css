@@ -42,6 +42,9 @@
     position: relative;
     margin-bottom: 0;
   }
+  .card{
+    padding-inline: 1em;
+  }
   .card:last-of-type {
     margin-bottom: 2em;
   }

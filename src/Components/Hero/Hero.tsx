@@ -25,6 +25,7 @@ const Hero: React.FC = () => {
           smooth={true}
           offset={-30}
           duration={500}
+          tabIndex={0}
           className="btn">
           Checkout my work
         </Link>

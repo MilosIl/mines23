@@ -1,16 +1,24 @@
-import './navbar.css'
-import { useState } from 'react';
+import './navbar.css';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import useShowButton from '../../Hooks/useShowButton';
 
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
 
-  useShowButton();
+  useEffect(() => {
+    showButton;
+  }, []);
 
+  const showButton = () => {
+    if (window.innerWidth <= 769) {
+      setIsClick(false);
+    } else {
+      setIsClick(true);
+    }
+  };
   const handleClick = () => setIsClick(!isClick);
-
+  const closeMobileMenu = () => setIsClick(false);
   const changeBackground = () => {
     if (window.scrollY >= 60) {
       setNav(false);
@@ -18,8 +26,8 @@ function Navbar() {
       setNav(true);
     }
   };
+  window.addEventListener('resize', showButton);
   window.addEventListener('scroll', changeBackground);
-
   return (
     <header>
       <nav className={nav ? 'nav change show' : 'nav show'}>
@@ -31,7 +39,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="svg-icon">
+              >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -45,7 +53,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="svg-icon">
+              >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -62,7 +70,7 @@ function Navbar() {
             smooth={true}
             offset={-60}
             duration={500}
-            onClick={handleClick}>
+            onClick={closeMobileMenu}>
             Home
           </Link>
           <Link
@@ -72,7 +80,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}>
+            onClick={closeMobileMenu}>
             Projects
           </Link>
           <Link
@@ -82,7 +90,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}>
+            onClick={closeMobileMenu}>
             About
           </Link>
           <Link
@@ -92,7 +100,7 @@ function Navbar() {
             smooth={true}
             offset={-30}
             duration={1000}
-            onClick={handleClick}>
+            onClick={closeMobileMenu}>
             Contact
           </Link>
         </ul>

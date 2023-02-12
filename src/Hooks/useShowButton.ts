@@ -9,7 +9,7 @@ const useShowButton = () => {
         }
       };
       useEffect(() => {
-        showButton();
+        showButton;
       }, []);
 }
 
