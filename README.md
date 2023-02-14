@@ -1,6 +1,6 @@
 # Personal portfolio
 
-Perosinal portfolio that showcase some of my work
+Perosinal portfolio that showcase some of my work.
 
 Building website and web applications is one of the biggest joy that gives meaning to something
 
