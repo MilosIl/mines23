@@ -5,7 +5,7 @@ const Projects: React.FC = () => {
   return (
     <div id="projects">
       <h2>Projects</h2>
-      <section className="project-section">
+      <main className="project-section">
         <Project
           name={'Hair studio'}
           description={'Website that you can make a appointment for your hair treatment'}
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
         image={'nema slike'}
         links={'github.com/repo-netflix'}
       />
-      </section>
+      </main>
     </div>
   );
 };
