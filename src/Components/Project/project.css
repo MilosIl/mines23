@@ -25,7 +25,6 @@
   padding-bottom: 0.5em;
   user-select: none;
 }
-
 .project-list {
   list-style: none;
   text-decoration: none;
@@ -56,7 +55,6 @@
   text-decoration:underline;
   text-underline-offset:0.25em;
 }
-
 @media(max-width:786px){
   .project-card{
     min-width:15em;

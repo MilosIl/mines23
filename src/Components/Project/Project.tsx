@@ -1,6 +1,7 @@
 import github from "../../assets/mdi_github.svg";
 import './project.css'
-type IProject = {
+
+interface IProject  {
   name: string;
   description: string;
   technologies: string[];

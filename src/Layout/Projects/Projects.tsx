@@ -14,13 +14,6 @@ const Projects: React.FC = () => {
           links={'github.com/repo-hair-studio'}
         />
         <Project
-          name={'Netflix'}
-          description={'Clone of netflix, as a final project from Scrimba'}
-          technologies={['React', 'Styled components' ,'Express', 'Firebase']}
-          image={'nema slike'}
-          links={'github.com/repo-netflix'}
-        />
-        <Project
           name={'Favorite dog'}
           description={
             'Website where you can find information of breed dog and save them'
@@ -29,6 +22,13 @@ const Projects: React.FC = () => {
           image={'nema slike'}
           links={'github.com/repo-doggo'}
         />
+      <Project
+        name={'Netflix'}
+        description={'Clone of netflix, as a final project from Scrimba'}
+        technologies={['React', 'Styled components' ,'Express', 'Firebase']}
+        image={'nema slike'}
+        links={'github.com/repo-netflix'}
+      />
       </section>
     </div>
   );
