@@ -4,10 +4,10 @@ Perosinal portfolio that showcase some of my work.
 
 
 Technologies used to build site:
+ - TypeScript
  - React
  - CSS
- - Node
- - TypeScript
+ - NodeJs
  - Zod
 
 
