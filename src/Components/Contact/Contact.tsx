@@ -46,6 +46,7 @@ const Contact: React.FC = () => {
     }
   };
   return (
+    
     <section id="contact">
       <h2>Contact me</h2>
       <div className="contact-container">
@@ -88,7 +89,6 @@ const Contact: React.FC = () => {
             />
             <label htmlFor="message">Message:</label>
           </div>
-
           <button className="btn btn-send" type="submit">
             Send message
           </button>
