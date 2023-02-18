@@ -10,7 +10,8 @@ Perosinal portfolio that showcase some of my work.
  - React
  - CSS
  - NodeJs
- - Zod
+
+ ---
 
 🔗Links:
 - [website: www.mines-dev.com](www.mines-dev.com) 
