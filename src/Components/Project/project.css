@@ -52,6 +52,11 @@
   text-decoration: none;
   color: var(--text-color);
 }
+
+.project-links>a:nth-child(2):focus{
+  outline-offset:0.3em;
+}
+
 .project-links>a:nth-child(2):hover{
   text-decoration:underline;
   text-underline-offset:0.25em;

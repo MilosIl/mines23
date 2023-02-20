@@ -1,7 +1,7 @@
 .about-section {
   font-size: 1rem;
 }
-.about-section > p {
+.about-text > p {
   margin-block: 1em;
   line-height: 1.8;
 }
@@ -33,4 +33,9 @@
 }
 .icons-container:hover > img:not(:hover) {
   transform: scale(0.9);
+}
+@media (max-width:786px){
+  .about-text > p {
+    margin-bottom:0;
+  }
 }

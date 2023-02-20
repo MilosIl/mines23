@@ -1,4 +1,4 @@
-import './hero.css'
+import './hero.css';
 import { Link } from 'react-scroll';
 import useBlinkEffect from '../../Hooks/useBlinkEffect';
 
@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero-section" id="home">
-      <div className="hero-left-side">
+      <div className="hero-title">
         <p className="title">Hi, I'm Miloš</p>
         <p className="title">
           <span className="blinking-cursor" aria-label={selectedTitle}>
@@ -16,6 +16,8 @@ const Hero: React.FC = () => {
           </span>
           developer
         </p>
+      </div>
+      <div className="hero-highlight">
         <h1>
           Building the websites of <span className="highlight">tomorrow</span>,
           today
@@ -30,7 +32,7 @@ const Hero: React.FC = () => {
           Checkout my work
         </Link>
       </div>
-      <div className="hero-right-side">hero-right-side</div>
+      <div className="hero-img"></div>
     </section>
   );
 };
