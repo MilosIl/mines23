@@ -32,11 +32,11 @@ const iconsGroup = [
 ];
 
 const About: React.FC = () => {
+  
   return (
     <section className="about-section" id="about">
       <h2>About me</h2>
       <div className="about-text">
-
       <p>
         As a self-taught front-end web developer, I am happy to present my
         portfolio to you. I specialize in creating good visually pleasing and
