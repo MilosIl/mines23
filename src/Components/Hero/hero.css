@@ -1,10 +1,10 @@
 .hero-section {
   padding: 1em;
-  height: 100vh;
+  min-height: 100vh;
   display:grid;
   grid-gap:1em;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows:repeat(3,auto);
+  grid-template-rows:repeat(2,auto);
 }
 
 .title {
@@ -13,7 +13,6 @@
 
 .hero-title,
 .hero-highlight{
-
   justify-self:left;
   align-self:center;
 }

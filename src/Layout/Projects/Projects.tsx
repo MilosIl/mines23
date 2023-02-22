@@ -1,8 +1,12 @@
 import Project from '../../Components/Project/Project';
+import AnimateIn from '../../Hooks/AnimateIn';
 import './projects.css'
 
 const Projects: React.FC = () => {
   return (
+    <AnimateIn     from={{ opacity: 0, translate: "0 3rem" }}
+    to={{ opacity: 1, translate: "none" }}>
+
     <div id="projects">
       <h2>Projects</h2>
       <main className="project-section">
@@ -31,6 +35,7 @@ const Projects: React.FC = () => {
       />
       </main>
     </div>
+    </AnimateIn>
   );
 };
 
