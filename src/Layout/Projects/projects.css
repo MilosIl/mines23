@@ -1,13 +1,13 @@
 .project-section {
-  padding-inline:1.5em;
+  padding-inline: 1.5em;
   display: flex;
   gap: 2em;
   justify-content: space-evenly;
 }
 
-@media (max-width:786px){
+@media (max-width: 786px) {
   .project-section {
-    pad-inline:0em;
+    padding-inline: 0em;
     flex-wrap: wrap;
   }
 }
