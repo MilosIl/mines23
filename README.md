@@ -3,8 +3,7 @@
 ---
 
 
-Perosinal portfolio that showcase some of my work.
-
+Perosinal portfolio that showcase some of my work. Build with react and node. 
 
 
 💻Technologies used to build site:
