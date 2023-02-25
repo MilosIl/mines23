@@ -11,7 +11,7 @@ Perosinal portfolio that showcase some of my work. Build with react and node.
  - React
  - CSS
  - NodeJs
-
+ - nodemailer
  ---
 
 🔗Links:
