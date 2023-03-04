@@ -64,6 +64,7 @@ const About: React.FC = () => {
         my skills and stay up-to-date with the latest web development
         technologies and trends.
       </p>
+      <p>Services that I provide are building website and web applications for all size business (or personal ones) with responsivnes for all screen sizes and maintance of same those sites</p>
       </div>
 
       <div className="card-container">
