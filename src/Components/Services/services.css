@@ -1,0 +1,8 @@
+.services > ul {
+  list-style-type: none;
+  padding-inline: 1em;
+}
+.services > ul > li {
+  margin-block: 1em;
+  font-size: 1rem;
+}

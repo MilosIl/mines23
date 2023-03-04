@@ -6,6 +6,7 @@ import Hero from './Components/Hero/Hero';
 import Projects from './Layout/Projects/Projects';
 import Footer from './Layout/Footer/Footer';
 import Navbar from './Layout/Navbar/Navbar';
+import Services from './Components/Services/Services';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Projects />
       <About />
+      <Services/>
       <Contact />
       <Footer />
     </div>
