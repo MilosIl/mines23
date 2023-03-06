@@ -1,4 +1,4 @@
-import './about.css'
+import './about.css';
 import Card from '../Card/Card';
 
 import html from '../../assets/mdi_html.svg';
@@ -32,39 +32,42 @@ const iconsGroup = [
 ];
 
 const About: React.FC = () => {
-  
   return (
     <section className="about-section" id="about">
       <h2>About me</h2>
       <div className="about-text">
-      <p>
-        As a self-taught front-end web developer, I am happy to present my
-        portfolio to you. I specialize in creating good visually pleasing and
-        user-friendly websites and web applications using a variety of
-        technologies and tools.
-      </p>
-      <p>
-        I am a highly motivated, efficient and detail-oriented. Through my
-        journey as a self-taught developer, I have gained a lot of experience
-        and understanding of client needs. I'm dedicated to the needs of the
-        clients, how I can solve the problem in the best way. I have a good
-        understanding of the needs of web accessibility and responsive design
-      </p>
-      <p>
-        I possess a strong understanding of web development technologies such as
-        HTML, CSS, JavaScript and TypeScript and using library like React, I am
-        well-versed in front-end frameworks like NextJS. I have experience
-        working with CSS and frameworks like Tailwind CSS, Material-UI and
-        Bootstrap. I have also proficient in design tools such as Figma. And
-        proficient in Git for version control and updating code.
-      </p>
-      <p>
-        Path as a self-taught front-end developer, it have their the challenges
-        and rewards of self-learning. So I am always looking for ways to improve
-        my skills and stay up-to-date with the latest web development
-        technologies and trends.
-      </p>
-      <p>Services that I provide are building website and web applications for all size business (or personal ones) with responsivnes for all screen sizes and maintance of same those sites</p>
+        <p>
+          As a self-taught front-end web developer, I am happy to present my
+          portfolio to you. I specialize in creating good visually pleasing and
+          user-friendly websites and web applications using a variety of
+          technologies and tools.
+        </p>
+        <p>
+          I am a highly motivated, efficient and detail-oriented. Through my
+          journey as a self-taught developer, I have gained a lot of experience
+          and understanding of client needs. I'm dedicated to the needs of the
+          clients, how I can solve the problem in the best way. I have a good
+          understanding of the needs of web accessibility and responsive design
+        </p>
+        <p>
+          I possess a strong understanding of web development technologies such
+          as HTML, CSS, JavaScript and TypeScript and using library like React,
+          I am well-versed in front-end frameworks like NextJS. I have
+          experience working with CSS and frameworks like Tailwind CSS,
+          Material-UI and Bootstrap. I have also proficient in design tools such
+          as Figma. And proficient in Git for version control and updating code.
+        </p>
+        <p>
+          Path as a self-taught front-end developer, it have their the
+          challenges and rewards of self-learning. So I am always looking for
+          ways to improve my skills and stay up-to-date with the latest web
+          development technologies and trends.
+        </p>
+        <p>
+          Services that I provide are building website and web applications for
+          all size business. Personal blogs or single page applications with
+          responsivnes for all screen sizes. Maintance of website that you have
+        </p>
       </div>
 
       <div className="card-container">
