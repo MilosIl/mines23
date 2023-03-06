@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
             milos.ilic@mines-dev.com
           </span>
           <div className="contact-icon">
-            <p>Social links:</p>
+          <p>Social links:</p>
             <a href="www.linkedin.com/in/milos-ilic-dev">
               <img src={linkedin} alt={linkedin} />
             </a>

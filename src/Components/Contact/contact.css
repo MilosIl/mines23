@@ -82,7 +82,7 @@
 }
 .contact-icon {
   display: flex;
-  items-align:center;
+  align-items:center;
   margin-top: 1em;
   gap: 2em;
 }
