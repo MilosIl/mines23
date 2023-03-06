@@ -96,12 +96,13 @@ const Contact: React.FC = () => {
         <div>
           <p>
             Feel free to reach out if you are interested in working with me or
-            for a chat
+            for a chat on email:
           </p>
           <span className="contact-email" onClick={handleCopy}>
             milos.ilic@mines-dev.com
           </span>
           <div className="contact-icon">
+            <p>Social links:</p>
             <a href="www.linkedin.com/in/milos-ilic-dev">
               <img src={linkedin} alt={linkedin} />
             </a>
