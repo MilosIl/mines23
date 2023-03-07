@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
             }
             technologies={['React', 'Material UI', 'Express', 'MongoDb']}
             image={'nema slike'}
-            links={'github.com/repo-hair-studio'}
+            links={'https://github.com/MilosIl/client'}
           />
           <Project
             name={'Favorite dog'}
@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
             }
             technologies={['Next.js', 'Tailwindcss']}
             image={'nema slike'}
-            links={'github.com/repo-doggo'}
+            links={'https://github.com/MilosIl/doggo_favorite'}
           />
           <Project
             name={'Netflix'}
             description={'Clone of netflix, as a final project from Scrimba'}
             technologies={['React', 'Styled components', 'Express', 'Firebase']}
             image={'nema slike'}
-            links={'github.com/repo-netflix'}
+            links={'https://github.com/MilosIl/netflix-clone'}
           />
         </main>
       </div>
