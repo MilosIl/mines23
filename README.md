@@ -6,7 +6,7 @@
 Perosinal portfolio that showcase some of my work. Build with react and node. 
 
 
-💻Technologies used to build site:
+💻 Technologies used to build site:
  - TypeScript
  - React
  - CSS
@@ -14,9 +14,9 @@ Perosinal portfolio that showcase some of my work. Build with react and node.
  - nodemailer
  ---
 
-🔗Links:
+🔗 Links:
 - [website: www.mines-dev.com](www.mines-dev.com) 
 - [linkedin profile](www.linkedin.com/milos-ilic-dev)
 
-Email:
+📧 Email:
  - milos.ilic@mines-dev.com
