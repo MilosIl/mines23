@@ -11,11 +11,12 @@ Perosinal portfolio that showcase some of my work. Build with react and node.
  - React
  - CSS
  - NodeJs
- ---
+<br/>
+<br/>  
 
 🔗 Links:
 - [website: www.mines-dev.com](www.mines-dev.com) 
 - [linkedin profile](www.linkedin.com/milos-ilic-dev)
 
-📧 Email:
- - milos.ilic@mines-dev.com
+<br/>
+📧 Email - milos.ilic@mines-dev.com
