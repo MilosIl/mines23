@@ -1,4 +1,5 @@
 import './navbar.css';
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
@@ -26,8 +27,10 @@ function Navbar() {
       setNav(true);
     }
   };
+
   window.addEventListener('resize', showButton);
   window.addEventListener('scroll', changeBackground);
+  
   return (
     <header>
       <nav className={nav ? 'nav change show' : 'nav show'}>
