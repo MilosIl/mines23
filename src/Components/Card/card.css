@@ -6,7 +6,7 @@
   padding: 1em;
   margin-block: 1em;
   border-radius: var(--border-radius);
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease-in;
   width: fit-content;
 }
 

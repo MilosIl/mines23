@@ -1,7 +1,7 @@
 import github from "../../assets/mdi_github.svg";
 import './project.css'
 
-interface IProject  {
+interface ProjectProps  {
   name: string;
   description: string;
   technologies: string[];
@@ -15,7 +15,7 @@ const Project = ({
   image,
   links,
   technologies,
-}: IProject) => {
+}: ProjectProps) => {
   return (
     <article className="project-card">
       <h3 className="project-name">{name}</h3>

@@ -1,10 +1,10 @@
 .hero-section {
   padding: 9em;
   min-height: 100vh;
-  display:grid;
-  grid-gap:1em;
+  display: grid;
+  grid-gap: 1em;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows:repeat(2,auto);
+  grid-template-rows: repeat(2, auto);
 }
 
 .title {
@@ -12,21 +12,20 @@
 }
 
 .hero-title,
-.hero-highlight{
-  justify-self:left;
-  align-self:center;
+.hero-highlight {
+  justify-self: left;
+  align-self: center;
 }
 
-.hero-title{
-  display:block;
+.hero-title {
+  display: block;
   grid-row: 1;
   grid-column: 1;
-
 }
 
-.hero-highlight{
+.hero-highlight {
   grid-row: 1 / span 2;
-  grid-column: 1 ;
+  grid-column: 1;
 }
 
 .highlight {
@@ -34,62 +33,61 @@
 }
 
 .hero-img {
-  margin-top:2em;
+  margin-top: 2em;
   grid-row: 1 / span 2;
   grid-column: 2;
-  justify-self:center;
-  align-self:start;
+  justify-self: center;
+  align-self: start;
   width: 300px;
   height: 400px;
   background: var(--primary-blue);
 }
 .blinking-cursor::after {
-  content: '|';
+  content: "|";
   animation: blink 700ms step-start infinite;
 }
 
 @media (max-width: 768px) {
-  .hero-section{
-    padding:1em;
-    grid-template-columns:1fr;
-    grid-template-rows:repeat(2, auto);
-    height:50em;
+  .hero-section {
+    padding: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    height: 50em;
   }
-  .hero-title{
-    grid-row:1;
+  .hero-title {
+    grid-row: 1;
   }
-  .hero-img{
-    grid-column:1;
-    grid-row:2;
-    justify-self:left;
-    margin-top:0em;
+  .hero-img {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: left;
+    margin-top: 0em;
   }
-  .hero-highlight{
-    grid-row:3;
+  .hero-highlight {
+    grid-row: 3;
   }
   .hero-title,
-  .hero-highlight{
-    padding-left:0;
-    padding-top:0;
+  .hero-highlight {
+    padding-left: 0;
+    padding-top: 0;
   }
 }
 
-@media (max-width: 425px){
-  .hero-section{
-    padding:0;
-    padding-top:2em;
-    margin-bottom:3em;
+@media (max-width: 425px) {
+  .hero-section {
+    padding: 0;
+    padding-top: 2em;
+    margin-bottom: 3em;
   }
-  h1{
-    margin-block:0.5em;
+  h1 {
+    margin-block: 0.5em;
   }
 }
 
-@media(max-width:280px){
-  .hero-section{
-    margin-bottom:7em;
+@media (max-width: 280px) {
+  .hero-section {
+    margin-bottom: 7em;
   }
-
 }
 
 @keyframes blink {

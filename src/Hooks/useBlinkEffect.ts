@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 export enum Phase {
   Typing,
   Pausing,
@@ -7,6 +8,7 @@ export enum Phase {
 const TYPING_INTERVAL = 150;
 const PAUSE_INTERVAL = 1500;
 const DELETE_INTERVAL = 150;
+
 const useBlinkEffect = (
   jobTitles: string[]
 ): {

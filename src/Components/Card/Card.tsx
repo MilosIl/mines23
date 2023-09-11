@@ -1,11 +1,11 @@
 import './card.css';
 
-interface ICard {
+interface CardProps {
   title: string;
   body: string;
 }
 
-const Card = ({ title, body }: ICard) => {
+const Card = ({ title, body }: CardProps) => {
   return (
     <div className="card">
       <p className="card-title">{title}</p>

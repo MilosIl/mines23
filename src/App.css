@@ -16,13 +16,13 @@ h1 {
   font-size: 2.625rem;
   max-width: 30ch;
   margin-block:1.25em;
+  margin-top:0;
 }
 h2 {
   margin-block:1em;
   font-size: 2rem;
 }
 h2:hover {
-  color: var(--primary-blue);
   user-select: none;
 }
 h3 {

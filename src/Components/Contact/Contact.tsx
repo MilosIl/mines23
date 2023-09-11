@@ -10,10 +10,10 @@ const formValidation = z.object({
   message: z.string().min(1,{message:"Message is required"}),
 });
 
-type TFormData = z.infer<typeof formValidation>
+type FormDataProps = z.infer<typeof formValidation>
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<TFormData>({
+  const [formData, setFormData] = useState<FormDataProps>({
     name: "",
     email: "",
     message: "",
