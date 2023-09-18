@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
           </span>
           <div className="contact-icon">
           <p>Social links:</p>
-            <a href="www.linkedin.com/in/milos-ilic-dev">
+            <a href="https://www.linkedin.com/in/milos-ilic-dev">
               <img src={linkedin} alt={linkedin} />
             </a>
             <a href="https://github.com/MilosIl">

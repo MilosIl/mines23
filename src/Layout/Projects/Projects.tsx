@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
             }
             technologies={['React', 'Material UI', 'Express', 'MongoDb']}
             image={'nema slike'}
-            links={'https://github.com/MilosIl/client'}
+            links={'https://github.com/MilosIl/hair-salon'}
           />
           <Project
             name={'Favorite dog'}
