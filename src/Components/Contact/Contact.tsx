@@ -50,10 +50,11 @@ const Contact: React.FC = () => {
     <section id="contact">
       <h2>Contact me</h2>
       <div className="contact-container">
-        <form className="form" onSubmit={handleSubmit} autoComplete="off">
+        <form className="form" onSubmit={handleSubmit} autoComplete="off" aria-label={'Contact form'}>
           <div className="input-holder">
             <input
               id="name"
+              aria-label="Your name"
               value={formData.name}
               onChange={handleChange}
               type="text"
@@ -66,6 +67,7 @@ const Contact: React.FC = () => {
           <div className="input-holder">
             <input
               id="email"
+              aria-label='Your email'
               type="email"
               name="email"
               className="input"
@@ -80,6 +82,7 @@ const Contact: React.FC = () => {
           <div className="input-holder">
             <textarea
               id="message"
+              aria-label='Your message'
               name="message"
               value={formData.message}
               onChange={handleChange}
@@ -89,7 +92,7 @@ const Contact: React.FC = () => {
             />
             <label htmlFor="message">Message:</label>
           </div>
-          <button className="btn btn-send" type="submit">
+          <button aria-label='Send a message' className="btn btn-send" type="submit">
             Send message
           </button>
         </form>
@@ -98,7 +101,7 @@ const Contact: React.FC = () => {
             Feel free to reach out if you are interested in working with me or
             for a chat on email:
           </p>
-          <span className="contact-email" onClick={handleCopy}>
+          <span aria-label='contact email' className="contact-email" onClick={handleCopy}>
             milos.ilic@mines-dev.com
           </span>
           <div className="contact-icon">

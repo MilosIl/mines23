@@ -1,9 +1,9 @@
-import './hero.css';
-import { Link } from 'react-scroll';
-import useBlinkEffect from '../../Hooks/useBlinkEffect';
+import "./hero.css";
+import { Link } from "react-scroll";
+import useBlinkEffect from "../../Hooks/useBlinkEffect";
 
 const Hero: React.FC = () => {
-  const jobTitles = ['Frontend', 'Front-end', 'Web', 'React'];
+  const jobTitles = ["Frontend", "Front-end", "Web", "React"];
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
   return (
@@ -23,6 +23,7 @@ const Hero: React.FC = () => {
           today
         </h1>
         <Link
+          aria-label="Checkout my work"
           to="projects"
           smooth={true}
           offset={-30}

@@ -5,7 +5,7 @@ import './projects.css';
 const Projects: React.FC = () => {
   return (
     <AnimateIn
-      from={{ opacity: 0, translate: '0 2rem' }}
+      from={{ opacity: 0, translate: '0 2em' }}
       to={{ opacity: 1, translate: 'none' }}>
       <div id="projects">
         <h2>Projects</h2>

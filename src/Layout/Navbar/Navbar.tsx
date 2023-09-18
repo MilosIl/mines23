@@ -1,7 +1,7 @@
-import './navbar.css';
+import "./navbar.css";
 
-import { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
+import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
@@ -28,12 +28,12 @@ function Navbar() {
     }
   };
 
-  window.addEventListener('resize', showButton);
-  window.addEventListener('scroll', changeBackground);
-  
+  window.addEventListener("resize", showButton);
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <header>
-      <nav className={nav ? 'nav change show' : 'nav show'}>
+      <nav className={nav ? "nav change show" : "nav show"}>
         <div className="menu-icon" onClick={handleClick}>
           {isClick ? (
             <svg
@@ -41,8 +41,7 @@ function Navbar() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="currentColor"
-              >
+              stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -55,8 +54,7 @@ function Navbar() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="currentColor"
-              >
+              stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -65,10 +63,11 @@ function Navbar() {
             </svg>
           )}
         </div>
-        <ul className={isClick ? 'nav-menu show' : 'nav-menu'}>
+        <ul className={isClick ? "nav-menu show" : "nav-menu"}>
           <Link
             activeClass="active"
             to="home"
+            aria-label="home"
             spy={true}
             smooth={true}
             offset={-60}
@@ -79,6 +78,7 @@ function Navbar() {
           <Link
             activeClass="active"
             to="projects"
+            aria-label="projects"
             spy={true}
             smooth={true}
             offset={-30}
@@ -89,6 +89,7 @@ function Navbar() {
           <Link
             activeClass="active"
             to="about"
+            aria-label="about"
             spy={true}
             smooth={true}
             offset={-30}
@@ -99,6 +100,7 @@ function Navbar() {
           <Link
             activeClass="active"
             to="contact"
+            aria-label="contact"
             spy={true}
             smooth={true}
             offset={-30}

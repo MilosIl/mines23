@@ -30,7 +30,7 @@ const Project = ({
         })}
       </ul>
       <div className="project-links">
-        <a href={links}>
+        <a href={links} aria-label='github link of project'>
           <img src={github} alt={github} />
         </a>
         <a href={links}>see demo</a>
