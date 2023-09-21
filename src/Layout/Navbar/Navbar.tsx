@@ -2,7 +2,6 @@ import "./navbar.css";
 
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-
 function Navbar() {
   const [isClick, setIsClick] = useState(false);
   const [nav, setNav] = useState(true);
@@ -34,6 +33,9 @@ function Navbar() {
   return (
     <header>
       <nav className={nav ? "nav change show" : "nav show"}>
+        <div className="logo">
+          <img src="./logo-light.png" alt="mines-dev" />
+        </div>
         <div className="menu-icon" onClick={handleClick}>
           {isClick ? (
             <svg
@@ -81,7 +83,7 @@ function Navbar() {
             aria-label="projects"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-100}
             duration={1000}
             onClick={closeMobileMenu}>
             Projects
@@ -92,7 +94,7 @@ function Navbar() {
             aria-label="about"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-60}
             duration={1000}
             onClick={closeMobileMenu}>
             About
@@ -103,7 +105,7 @@ function Navbar() {
             aria-label="contact"
             spy={true}
             smooth={true}
-            offset={-30}
+            offset={-60}
             duration={1000}
             onClick={closeMobileMenu}>
             Contact

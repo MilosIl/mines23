@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export enum Phase {
+enum Phase {
   Typing,
   Pausing,
   Deleting,
@@ -44,7 +44,7 @@ const useBlinkEffect = (
           setPhase(Phase.Typing);
           return;
         }
-        if(selectedTitle === 3){
+        if(selectedTitle === jobTitles.length-1){
           setPhase(Phase.Pausing)
         }
         const nextRemaining = jobTitles[selectedTitle].slice(

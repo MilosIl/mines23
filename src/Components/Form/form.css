@@ -1,0 +1,51 @@
+.input {
+  padding: 0.5em;
+  border: none;
+  border-bottom: 2px solid var(--primary-blue);
+  background-color: transparent;
+  outline: none;
+  color: var(--text-color);
+  width: 100%;
+}
+.input-holder {
+  width: 17em;
+  position: relative;
+}
+.input-holder label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.input-holder textarea:focus + label,
+.input-holder textarea:valid + label,
+.input-holder input:focus + label,
+.input-holder input:valid + label {
+  top: -1em;
+}
+.input-holder textarea + label {
+  padding-top: 0.5em;
+  padding-left: 0.75em;
+}
+.input-holder textarea:focus + label,
+.input-holder textarea:valid + label {
+  top: -2em;
+  left: -0.7em;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+}
+.textarea {
+  padding: 0.5em;
+  width: 100%;
+  resize: none;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--primary-blue);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+}

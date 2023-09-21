@@ -43,6 +43,8 @@
   background: var(--primary-blue);
 }
 .blinking-cursor::after {
+  position:relative;
+  z-index:-1;
   content: "|";
   animation: blink 700ms step-start infinite;
 }
