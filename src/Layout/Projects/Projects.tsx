@@ -23,13 +23,11 @@ const Projects: React.FC = () => {
             technologies={["React", "Material UI", "Express", "MongoDb"]}
             image={salon}
             gLink={"https://github.com/MilosIl/hair-salon"}
-            link=""
+            link="https://beauty-studio.mines-dev.com/"
           />
           <Project
             name={"Favorite dog"}
-            description={
-              "Website where you can find information of breed dog"
-            }
+            description={"Website where you can find information of breed dog"}
             technologies={["Next.js", "Tailwindcss"]}
             image={doggo}
             link={"https://doggo-favorite.vercel.app/"}
@@ -41,7 +39,7 @@ const Projects: React.FC = () => {
             technologies={["React", "TailwindCSS"]}
             image={rentCar}
             gLink={"https://github.com/MilosIl/rent-a-car"}
-            link="rent-cars.mines-dev.com"
+            link="https://rent-cars.mines-dev.com"
           />
         </main>
       </div>
