@@ -6,15 +6,16 @@ interface ProjectProps  {
   description: string;
   technologies: string[];
   image: string;
-  links: string;
+  link: string;
+  gLink:string;
 };
 
 const Project = ({
   name,
   description,
   image,
-  links,
-  technologies,
+  link,
+  technologies,gLink
 }: ProjectProps) => {
   return (
     <article className="project-card">
@@ -30,10 +31,10 @@ const Project = ({
         })}
       </ul>
       <div className="project-links">
-        <a href={links} aria-label='github link of project'>
+        <a href={gLink} aria-label='github link of project'>
           <img src={github} alt={github} />
         </a>
-        <a href={links}>see demo</a>
+        <a href={link}>see demo</a>
       </div>
     </article>
   );

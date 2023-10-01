@@ -4,7 +4,6 @@
   flex: 1;
   border: 2px solid var(--primary-blue);
   border-radius: var(--border-radius);
-
   padding: 1.25em;
   background: var(--bg-color);
   transition: all 400ms ease-in;
@@ -13,6 +12,15 @@
   scale: 1.1;
   border: none;
   box-shadow: 0px 2px 30px -12px var(--primary-blue);
+}
+.project-image{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 1em;
+}
+.project-image img{
+  width:20em;
 }
 .project-description {
   width: 100%;
@@ -64,5 +72,8 @@
 @media(max-width:786px){
   .project-card{
     min-width:15em;
+  }
+  .project-image img{
+    padding:1.5em;
   }
 }

@@ -5,6 +5,7 @@
   grid-gap: 1em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
+  align-content: space-evenly;
 }
 
 .title {
@@ -33,15 +34,21 @@
 }
 
 .hero-img {
-  margin-top: 2em;
   grid-row: 1 / span 2;
   grid-column: 2;
   justify-self: center;
   align-self: start;
-  width: 300px;
-  height: 400px;
-  background: var(--primary-blue);
+  background-image: url(../../assets/hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 500px;
+
 }
+.hero-img img{
+  aspect-ratio: 1/1
+}
+
 .blinking-cursor::after {
   position:relative;
   z-index:-1;
@@ -56,8 +63,8 @@
     grid-template-rows: repeat(2, auto);
     height: 50em;
   }
-  .hero-title {
-    grid-row: 1;
+  .hero-title{
+    padding-top: 8em;
   }
   .hero-img {
     grid-column: 1;
@@ -68,11 +75,7 @@
   .hero-highlight {
     grid-row: 3;
   }
-  .hero-title,
-  .hero-highlight {
-    padding-left: 0;
-    padding-top: 0;
-  }
+
 }
 
 @media (max-width: 425px) {
@@ -86,11 +89,6 @@
   }
 }
 
-@media (max-width: 280px) {
-  .hero-section {
-    margin-bottom: 7em;
-  }
-}
 
 @keyframes blink {
   50% {

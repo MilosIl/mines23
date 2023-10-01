@@ -6,8 +6,14 @@
 }
 
 @media (max-width: 786px) {
+  #projects{
+    margin-top:7em;
+  }
   .project-section {
     padding-inline: 0em;
     flex-wrap: wrap;
   }
+}
+
+@media(max-width:425px){
 }

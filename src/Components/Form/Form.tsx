@@ -7,7 +7,6 @@ const Form = () => {
     email: z.string().min(1,{message:"Email is required"}).email({message:"Must be a valid email"}),
     message: z.string().min(1,{message:"Message is required"}),
   });
-  
   type FormDataProps = z.infer<typeof formValidation>
 
   const [formData, setFormData] = useState<FormDataProps>({
@@ -29,7 +28,6 @@ const Form = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      alert("Email sent successfully");
       setFormData({
         name:"", email:"", message:""
       })
