@@ -34,8 +34,7 @@ const Hero: React.FC = () => {
           Checkout my work
         </Link>
       </div>
-      <div className="hero-img">
-      </div>
+      <div className="hero-img"><img src={hero} alt={hero}/>      </div>
     </section>
   );
 };

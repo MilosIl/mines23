@@ -38,12 +38,6 @@
   grid-column: 2;
   justify-self: center;
   align-self: start;
-  background-image: url(../../assets/hero.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 350px;
-  height: 500px;
-
 }
 .hero-img img{
   aspect-ratio: 1/1
@@ -60,17 +54,13 @@
   .hero-section {
     padding: 1em;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
     height: 50em;
   }
-  .hero-title{
-    padding-top: 8em;
-  }
+
   .hero-img {
     grid-column: 1;
     grid-row: 2;
     justify-self: left;
-    margin-top: 0em;
   }
   .hero-highlight {
     grid-row: 3;
@@ -81,8 +71,15 @@
 @media (max-width: 425px) {
   .hero-section {
     padding: 0;
-    padding-top: 2em;
     margin-bottom: 3em;
+    align-content:center;
+  }
+  .hero-img{
+    place-items:center;
+  }
+  .hero-img img{
+    height:300px;
+    width:200px;
   }
   h1 {
     margin-block: 0.5em;

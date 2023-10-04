@@ -77,3 +77,8 @@
     padding:1.5em;
   }
 }
+@media(max-width:280px){
+  .project-image img{
+    width: 15em;
+  }
+}
