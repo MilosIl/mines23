@@ -83,7 +83,7 @@ function Navbar() {
             aria-label="projects"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-80}
             duration={1000}
             onClick={closeMobileMenu}>
             Projects

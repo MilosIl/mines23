@@ -1,6 +1,6 @@
 .project-card {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   border: 2px solid var(--primary-blue);
   border-radius: var(--border-radius);
@@ -13,19 +13,19 @@
   border: none;
   box-shadow: 0px 2px 30px -12px var(--primary-blue);
 }
-.project-image{
+.project-image {
   display: flex;
   justify-content: center;
   align-self: center;
   padding: 1em;
 }
-.project-image img{
-  width:20em;
+.project-image img {
+  width: 20em;
 }
 .project-description {
   width: 100%;
-  padding-block:0.5em;
-  flex-basis:20%;
+  padding-block: 0.5em;
+  flex-basis: 20%;
 }
 .project-technologies {
   font-size: 1rem;
@@ -38,20 +38,20 @@
   list-style: none;
   text-decoration: none;
   padding-block: 1em;
-  flex-basis:100%;
+  flex-basis: 100%;
 }
-.projects-name {
-  font-size: 1rem;
+h3.project-name {
+  text-align: center;
 }
 .project-card ul li {
-  padding-block: 0.25em ;
+  padding-block: 0.25em;
   text-decoration: none;
   font-weight: 500;
 }
 .project-links {
   display: flex;
-  justify-content:space-between;
-  align-items:flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
   align-items: center;
   gap: 2em;
 }
@@ -61,24 +61,24 @@
   color: var(--text-color);
 }
 
-.project-links>a:nth-child(2):focus{
-  outline-offset:0.3em;
+.project-links > a:nth-child(2):focus {
+  outline-offset: 0.3em;
 }
 
-.project-links>a:nth-child(2):hover{
-  text-decoration:underline;
-  text-underline-offset:0.25em;
+.project-links > a:nth-child(2):hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
-@media(max-width:786px){
-  .project-card{
-    min-width:15em;
+@media (max-width: 786px) {
+  .project-card {
+    min-width: 15em;
   }
-  .project-image img{
-    padding:1.5em;
+  .project-image img {
+    padding: 1.5em;
   }
 }
-@media(max-width:280px){
-  .project-image img{
+@media (max-width: 280px) {
+  .project-image img {
     width: 15em;
   }
 }
