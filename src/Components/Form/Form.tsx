@@ -3,12 +3,12 @@ import { z } from "zod";
 import "./form.css";
 const Form = () => {
   const formValidation = z.object({
-    name: z.string().min(1, { message: "Name is required" }),
+    name: z.string().min(1, { message: "Name is required" }).refine(s => !s.includes(' ')),
     email: z
       .string()
       .min(1, { message: "Email is required" })
       .email({ message: "Must be a valid email" }),
-    message: z.string().min(1, { message: "Message is required" }),
+    message: z.string().min(1, { message: "Message is required" }).refine(s => !s.includes(' ')),
   });
   type FormDataProps = z.infer<typeof formValidation>;
 
@@ -26,7 +26,7 @@ const Form = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      fetch("https://www.mines-dev.com/email", {
+      fetch("/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
