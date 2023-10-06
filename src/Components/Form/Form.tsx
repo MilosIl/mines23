@@ -26,7 +26,7 @@ const Form = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      fetch("/email", {
+      fetch("www.mines-dev.com/email/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -42,7 +42,7 @@ const Form = () => {
   };
   return (
     <form
-      action="/email"
+      action="/email/"
       method="POST"
       className="form"
       onSubmit={handleSubmit}
