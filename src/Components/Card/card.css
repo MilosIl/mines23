@@ -8,9 +8,12 @@
   border-radius: var(--border-radius);
   transition: transform 0.6s ease-in;
   width: fit-content;
+  z-index:-1;
 }
 
 .card:hover {
+  font-weight: bolder;
+  color: var(--primary-blue);
   outline: 1px solid var(--primary-blue);
 }
 
@@ -24,10 +27,7 @@
   user-select: none;
   transition: all ease-in-out;
 }
-.card-title:hover {
-  font-weight: bolder;
-  color: var(--primary-blue);
-}
+
 .card-body {
   font-size: 1rem;
   text-align: center;
