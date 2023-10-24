@@ -3,12 +3,19 @@ import { z } from "zod";
 import "./form.css";
 const Form = () => {
   const formValidation = z.object({
-    name: z.string().min(1, { message: "Name is required" }).refine(s => !s.includes(' ')),
+    name: z
+      .string()
+      .min(1, { message: "Name is required" })
+      .refine((s) => !s.includes(" ")),
     email: z
       .string()
       .min(1, { message: "Email is required" })
       .email({ message: "Must be a valid email" }),
-    message: z.string().min(1, { message: "Message is required" }).refine(s => !s.includes(' ')),
+    message: z
+      .string()
+      .regex(new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}"))
+      .min(1, { message: "Message is required" })
+      .refine((s) => !s.includes(" ")),
   });
   type FormDataProps = z.infer<typeof formValidation>;
 
@@ -17,6 +24,7 @@ const Form = () => {
     email: "",
     message: "",
   });
+  const [isEmailSend, setIsEmailSend] = useState<boolean>(false);
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -31,11 +39,15 @@ const Form = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      setIsEmailSend(true);
       setFormData({
         name: "",
         email: "",
         message: "",
       });
+      setTimeout(()=>{
+        setIsEmailSend(false)
+      },5000)
     } catch (err) {
       alert(err);
     }
@@ -95,6 +107,7 @@ const Form = () => {
         type="submit">
         Send message
       </button>
+      {isEmailSend ? "Thank you for submiting a message" : ""}
     </form>
   );
 };
