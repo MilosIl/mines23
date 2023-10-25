@@ -34,7 +34,7 @@ const Form = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      fetch("www.mines-dev.com/email/", {
+      fetch("/email/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -47,7 +47,7 @@ const Form = () => {
       });
       setTimeout(()=>{
         setIsEmailSend(false)
-      },5000)
+      },3000)
     } catch (err) {
       alert(err);
     }
