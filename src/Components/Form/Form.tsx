@@ -10,10 +10,10 @@ const Form = () => {
     email: z
       .string()
       .min(1, { message: "Email is required" })
-      .email({ message: "Must be a valid email" }),
+      .email({ message: "Must be a valid email" })
+      .regex(new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}")),
     message: z
       .string()
-      .regex(new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}"))
       .min(1, { message: "Message is required" })
       .refine((s) => !s.includes(" ")),
   });
