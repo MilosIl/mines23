@@ -1,5 +1,5 @@
 .about-section {
-  margin-top:5em;
+  margin-top: 5em;
   font-size: 1rem;
 }
 .about-text > p {
@@ -35,8 +35,8 @@
 .icons-container:hover > img:not(:hover) {
   transform: scale(0.9);
 }
-@media (max-width:786px){
+@media (max-width: 786px) {
   .about-text > p {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 }
