@@ -52,11 +52,11 @@
 
 @media (max-width: 768px) {
   .nav a {
-    margin: 1em;
+    margin-block: .5em;
+    padding:.5em;
   }
   .nav {
     background: none;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,6 +66,7 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
+    gap:1em;
     width: 100%;
     position: absolute;
     top: 0;
