@@ -5,13 +5,18 @@
   justify-content: space-evenly;
 }
 
+@media (max-width:1200px) {
+  .project-section {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 786px) {
   #projects{
     margin-top:7em;
   }
   .project-section {
     padding-inline: 0em;
-    flex-wrap: wrap;
   }
 }
 
