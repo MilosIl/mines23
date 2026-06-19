@@ -49,3 +49,36 @@
   color: var(--text-color);
   border-radius: var(--border-radius);
 }
+
+.btn-loading {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.form-success {
+  color: #2ecc71;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+}

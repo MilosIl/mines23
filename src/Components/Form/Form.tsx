@@ -1,57 +1,68 @@
 import { FormEventHandler, useState } from "react";
 import { z } from "zod";
 import "./form.css";
-const Form = () => {
-  const formValidation = z.object({
-    name: z
-      .string()
-      .min(1, { message: "Name is required" })
-      .refine((s) => !s.includes(" ")),
-    email: z
-      .string()
-      .min(1, { message: "Email is required" })
-      .email({ message: "Must be a valid email" })
-      .regex(new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}")),
-    message: z
-      .string()
-      .min(1, { message: "Message is required" })
-      .refine((s) => !s.includes(" ")),
-  });
-  type FormDataProps = z.infer<typeof formValidation>;
 
+const formValidation = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z
+    .string()
+    .min(1, { message: "Email is required" })
+    .email({ message: "Must be a valid email" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+});
+
+type FormDataProps = z.infer<typeof formValidation>;
+
+const Form = () => {
   const [formData, setFormData] = useState<FormDataProps>({
     name: "",
     email: "",
     message: "",
   });
-  const [isEmailSend, setIsEmailSend] = useState<boolean>(false);
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
+
+    const result = formValidation.safeParse(formData);
+    if (!result.success) {
+      setError(result.error.errors[0].message);
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
     try {
-      fetch("/email/", {
+      const response = await fetch("/email/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      setIsEmailSend(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-      setTimeout(()=>{
-        setIsEmailSend(false)
-      },3000)
+
+      if (!response.ok) {
+        throw new Error("Failed to send message. Please try again.");
+      }
+
+      setIsEmailSent(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setIsEmailSent(false), 4000);
     } catch (err) {
-      alert(err);
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
+
   return (
     <form
       action="/email/"
@@ -59,7 +70,7 @@ const Form = () => {
       className="form"
       onSubmit={handleSubmit}
       autoComplete="off"
-      aria-label={"Contact form"}>
+      aria-label="Contact form">
       <div className="input-holder">
         <input
           id="name"
@@ -69,6 +80,7 @@ const Form = () => {
           type="text"
           name="name"
           className="input"
+          maxLength={100}
           required
         />
         <label htmlFor="name">Name:</label>
@@ -82,6 +94,7 @@ const Form = () => {
           className="input"
           value={formData.email}
           onChange={handleChange}
+          maxLength={254}
           required
         />
         <label className="label" htmlFor="email">
@@ -97,17 +110,37 @@ const Form = () => {
           onChange={handleChange}
           required
           rows={7}
+          maxLength={2000}
           className="textarea"
         />
         <label htmlFor="message">Message:</label>
       </div>
+
       <button
         aria-label="Send a message"
-        className="btn btn-send"
-        type="submit">
-        Send message
+        className={`btn btn-send${isLoading ? " btn-loading" : ""}`}
+        type="submit"
+        disabled={isLoading}>
+        {isLoading ? (
+          <>
+            <span className="spinner" aria-hidden="true" />
+            Sending...
+          </>
+        ) : (
+          "Send message"
+        )}
       </button>
-      {isEmailSend ? "Thank you for submiting a message" : ""}
+
+      {isEmailSent && (
+        <p className="form-success" role="status">
+          Thank you! We'll be in touch soon.
+        </p>
+      )}
+      {error && (
+        <p className="form-error" role="alert">
+          {error}
+        </p>
+      )}
     </form>
   );
 };

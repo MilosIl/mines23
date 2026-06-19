@@ -10,10 +10,10 @@ import Navbar from './Layout/Navbar/Navbar';
 function App() {
   return (
     <div className="container">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
-      <Projects />
-      <About />
+      {/* <Projects /> */}
+      {/* <About /> */}
       <Contact />
       <Footer />
     </div>

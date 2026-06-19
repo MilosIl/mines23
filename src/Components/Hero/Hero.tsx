@@ -8,33 +8,13 @@ const Hero: React.FC = () => {
   const { title, selectedTitle } = useBlinkEffect(jobTitles);
 
   return (
-    <section className="hero-section" id="home">
-      <div className="hero-title">
-        <p className="title">Hi, I'm Miloš</p>
-        <p className="title">
-          <span className="blinking-cursor" aria-label={selectedTitle}>
-            {title}
-          </span>
-          developer
-        </p>
-      </div>
-      <div className="hero-highlight">
-        <h1>
-          Building the websites of <span className="highlight">tomorrow</span>,
-          today
-        </h1>
-        <Link
-          aria-label="Checkout my work"
-          to="projects"
-          smooth={true}
-          offset={-30}
-          duration={500}
-          tabIndex={0}
-          className="btn">
-          Checkout my work
-        </Link>
-      </div>
-      <div className="hero-img"><img src={hero} alt={hero}/>      </div>
+    <section className="hero">
+      <h1>Creating Websites, Web Apps &amp; Mobile Applications</h1>
+      <p>Our site is currently in a redesign phase — thank you for your patience.</p>
+      <p>We're still here and happy to keep in touch.</p>
+      <Link to="contact" smooth={true} duration={500} className="hero-cta">
+        Contact us
+      </Link>
     </section>
   );
 };

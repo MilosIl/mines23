@@ -10,10 +10,11 @@ const Contact: React.FC = () => {
 
   return (    
     <section id="contact">
-      <h2>Contact me</h2>
+      {/* <h2>Contact me</h2> */}
       <div className="contact-container">
+        <p>Contact us for new projects or if you're interested in working with us.</p>
         <Form/>
-        <div className="contact-info">
+        {/* <div className="contact-info">
           <p>
             Feel free to reach out if you are interested in working with me or
             for a chat on email:
@@ -30,7 +31,7 @@ const Contact: React.FC = () => {
               <img src={github} alt={github} />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
